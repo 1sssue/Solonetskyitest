@@ -1,0 +1,65 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.marquee-container {
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.marquee-text {
+    position: absolute;
+    white-space: nowrap;
+}
+
+/* 1. Коливання тексту з боку в бік */
+.bounce {
+    background-color: #f0a;
+    animation: bounce 3s ease-in-out infinite alternate;
+}
+
+@keyframes bounce {
+    0% { left: 0; }
+    100% { left: calc(100% - 200px); } /* 200px - ширина тексту */
+}
+
+/* 2. Текст пробігає справа наліво та з'являється знову */
+.scroll-left {
+    background-color: #5cd;
+    animation: scroll-left 10s linear infinite;
+}
+
+@keyframes scroll-left {
+    0% { left: 100%; }
+    100% { left: -100%; }
+}
+
+/* 3. Текст пробігає зліва направо та зупиняється */
+.scroll-right {
+    background-color: #a5d;
+    animation: scroll-right 8s linear forwards;
+}
+
+@keyframes scroll-right {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* 4. Текст із запізненням 1 */
+.delay1 {
+    background-color: #ffa;
+    animation: scroll-left 12s linear infinite;
+    animation-delay: 2s;
+}
+
+/* 5. Текст із запізненням 2 */
+.delay2 {
+    background-color: #aff;
+    animation: scroll-left 14s linear infinite;
+    animation-delay: 4s;
+}
