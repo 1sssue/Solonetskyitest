@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Реєстрація</title>
+
+  <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+<div class="form">
+  <p class="forgot"><a href="main.html">Повернутися на головну</a></p>
+  <ul class="tab-group">
+    <li class="tab active"><a href="#signup">Зареєструватися</a></li>
+    <li class="tab"><a href="#login">Увійти</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="signup">
+      <h1>Реєстрація</h1>
+
+      <form action="/" method="post">
+
+        <div class="top-row">
+          <div class="field-wrap">
+            <label>
+              Ім'я<span class="req">*</span>
+            </label>
+            <input type="text" required autocomplete="off" />
+          </div>
+
+          <div class="field-wrap">
+            <label>
+              Прізвище<span class="req">*</span>
+            </label>
+            <input type="text"required autocomplete="off"/>
+          </div>
+        </div>
+
+        <div class="field-wrap">
+          <label>
+            Електронна пошта<span class="req">*</span>
+          </label>
+          <input type="email"required autocomplete="off"/>
+        </div>
+
+        <div class="field-wrap">
+          <label>
+            Введіть пароль<span class="req">*</span>
+          </label>
+          <input type="password"required autocomplete="off"/>
+        </div>
+
+        <button type="submit" class="button button-block"/>Почнімо</button>
+
+      </form>
+
+    </div>
+
+    <div id="login">
+      <h1>Логін</h1>
+
+      <form action="/" method="post">
+
+        <div class="field-wrap">
+          <label>
+            Електронна пошта<span class="req">*</span>
+          </label>
+          <input type="email"required autocomplete="off"/>
+        </div>
+
+        <div class="field-wrap">
+          <label>
+            Пароль<span class="req">*</span>
+          </label>
+          <input type="password"required autocomplete="off"/>
+        </div>
+
+        <p class="forgot"><a href="notforget.html">Забули пароль?</a></p>
+
+        <button class="button button-block"/>Увійти</button>
+
+      </form>
+
+    </div>
+
+  </div><!-- tab-content -->
+
+</div> <!-- /form -->
+<script src="js/register.js"></script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>HOBBY</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+  <link rel="stylesheet" href="css/hobby.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  <!-- Add your site or application content here -->
+  <header class="header">
+    <div class="container">
+      <div class="header_inner">
+        <nav class="nav1">
+          <a class="nav_link always" href="register.html">
+            <span class="navbar__icon always">
+            <i class="fa-solid fa-right-to-bracket"></i>
+              </span>
+          </a>
+        </nav>
+        <nav class="nav">
+          <a class="nav_link" href="main.html">
+            <span class="navbar__icon">
+            <i class="fa-solid fa-house"></i>
+              </span>
+          </a>
+          <a class="nav_link" href="about.html">
+            <span class="navbar__icon">
+            <i class="fa-solid fa-address-card"></i>
+            </span>
+          </a>
+          <a class="nav_link3" href="hobby.html">
+            <span class="navbar__icon">
+            <i class="fa-solid fa-ranking-star"></i>
+            </span>
+          </a>
+          <a class="nav_link" href="city.html">
+            <span class="navbar__icon">
+            <i class="fa-solid fa-city"></i>
+            </span>
+          </a>
+        </nav>
+        <span class="skull">
+          <i class="fa-solid fa-skull">
+          </i>
+        </span>
+        <div class="navbar">
+          <a class="navbar__item -black" href="https://www.twitch.tv/">
+          <span class="navbar__icon">
+            <i class="fa-brands fa-twitch"></i>
+          </span>
+          </a>
+          <a class="navbar__item -black" href="https://www.youtube.com/">
+          <span class="navbar__icon">
+            <i class="fa-brands fa-youtube"></i>
+          </span>
+          </a>
+          <a class="navbar__item -black" href="404.html">
+          <span class="navbar__icon">
+            <i class="fa-brands fa-facebook"></i>
+          </span>
+          </a>
+          <a class="navbar__item -black" href="https://codepen.io/">
+          <span class="navbar__icon">
+            <i class="fa-brands fa-codepen"></i>
+          </span>
+          </a>
+          <a class="navbar__item -black" href="https://www.tiktok.com/uk-UA/">
+          <span class="navbar__icon">
+            <i class="fa-brands fa-tiktok"></i>
+          </span>
+          </a>
+        </div>
+        </div>
+    </div>
+  </header>
+  <h2 class="hobby">програмування</h2>
+  <div class="section">
+    <pre>
+    <code>
+      Реалізація лінійного пошуку
+
+      #include iostream
+      #include vector
+      #include Windows.h
+
+      using namespace std;
+
+      int linearSearch(const vector'int'& arr, int target) {
+      int steps = 0;
+      for (int i = 0; i < arr.size(); ++i) {
+      steps++;
+      if (arr[i] == target) {
+      cout << "Кількість виконаних дій: " << steps << endl;
+      return i; // Повертаємо індекс знайденого елемента
+      }
+      }
+      cout << "Кількість виконаних дій: " << steps << endl;
+      return -1; // Якщо елемент не знайдено, повертаємо -1
+      }
+
+      int main() {
+      SetConsoleCP(1251);
+      SetConsoleOutputCP(1251);
+
+      vector'int' arr = { 1, 3, 5, 7, 9, 11, 13, 15 };
+      int target = 15;
+
+      int linearResult = linearSearch(arr, target);
+
+      if (linearResult != -1) {
+      cout << "Елемент - " << target << "\nЗнайдений на " << linearResult + 1 << " позиції" << endl;
+      }
+      else {
+      cout << "Елемент - " << target << " не знайдений" << endl;
+      }
+        return 0;
+        }
+    </code>
+      <hr>
+    <code class="code2">
+      Перевірка чи належить точка заданій області
+
+      #include iostream
+      #include math.h
+      #include Windows.h
+
+      using namespace std;
+
+      int main() {
+	      setlocale(LC_ALL, "ukr");
+
+      float x, y;
+      bool circle, pryma;
+
+      printf("Введiть значення X : ");
+      scanf_s("%f", &x);
+      printf("Введiть значення Y : ");
+      scanf_s("%f", &y);
+      circle = pow((x + 2), 2) + pow((y - 4), 2) <= pow((2),2);
+      pryma = y >= x / 2 + 2;
+
+       if (circle && pryma)
+        printf("Точка належить заданiй областi");
+       else
+        printf("Точка не належить заданiй областi");
+
+      return 0;
+    }
+    </code>
+      <hr>
+    <code class="code3">
+      Программа для розрахунку Y = (2500 * х – 8) / (3 * х2 + 20) при X = 2;
+
+      #include iostream
+      using namespace std;
+      int main() {
+      long step;
+      long X;
+      long result[7];
+
+      cout << "Enter X : ";
+      cin >> X;
+      cout << "Enter step : ";
+      cin >> step;
+
+      __asm {
+      lea EBX, result
+      mov ECX, 7
+      m1: mov EAX, 3
+      imul X
+      imul X
+      add EAX, 20
+      mov EDI, EAX
+      mov EAX, 2500
+      imul X
+      sub EAX, 8
+      cdq
+      div EDI
+      shr EDI, 1
+      cmp EDI, EDX
+      adc EAX, 0
+      mov dword ptr[EBX], EAX
+      add EBX , 4
+      mov ESI, step
+      add X, ESI
+      loop m1
+      }
+      for (int i = 0; i < 7; i++) {
+      cout << "Result : " << result[i] << endl;
+      }
+    system("pause");
+    return 0;
+  }
+    </code>
+    </pre>
+  </div>
+</body>
+
+</html>

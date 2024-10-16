@@ -1,0 +1,230 @@
+$optionDefaultColours: #ED5565,#FC6E51,#FFCE54,#2ECC71,#5D9CEC,#AC92EC;
+
+.nav_link4 {
+  position: relative;
+  text-transform: uppercase;
+  border-radius:50px;
+  padding: 15px 60px;
+  margin: 20px;
+  text-decoration: none;
+  color: #000000;
+  width: 400px; height: 60px;
+  box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+  transition: 0.5s;
+
+  font-size: larger;
+}
+
+
+.options {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    overflow: hidden;
+    min-width: 600px;
+    max-width: 900px;
+    width: calc(100% - 100px);
+    height: 400px;
+    margin: auto;
+    padding-top: 20px;
+
+    @for $i from 1 through 4 {
+      @media screen and (max-width:798px - $i*80) {
+        min-width: 600px - $i*80;
+
+        .option:nth-child(#{6-$i}) {
+          display: none;
+        }
+      }
+    }
+
+    .option,
+    .option1,
+    .option2 {
+      position: relative;
+      overflow: hidden;
+      min-width: 60px;
+      margin: 10px;
+      box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+      //border:0px solid --defaultColor;
+
+      background: var(--optionBackground, var(--defaultBackground, #E6E9ED));
+      background-size: auto 120%;
+      background-position: center;
+      cursor: pointer;
+      transition: .5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+
+      @for $i from 1 through length($optionDefaultColours) {
+        &:nth-child(#{$i}) {
+          --defaultBackground: #{nth($optionDefaultColours, $i)};
+        }
+      }
+
+      &.active {
+        flex-grow: 10000;
+        transform: scale(1);
+        max-width: 600px;
+        margin: 0;
+        border-radius: 40px;
+        background-size: auto 100%;
+
+        .shadow {
+          box-shadow: inset 0 -120px 120px -120px black, inset 0 -120px 120px -100px black;
+        }
+
+        .label {
+          bottom: 20px;
+          left: 20px;
+
+          .info > div {
+            left: 0;
+            opacity: 1;
+          }
+        }
+        /*&:active {
+               transform:scale(0.9);
+            }*/
+      }
+
+      &:not(.active) {
+        flex-grow: 1;
+        border-radius: 30px;
+
+        .shadow {
+          bottom: -40px;
+          box-shadow: inset 0 -120px 0px -120px black, inset 0 -120px 0px -100px black;
+        }
+
+        .label {
+          bottom: 10px;
+          left: 10px;
+
+          .info > div {
+            left: 20px;
+            opacity: 0;
+          }
+        }
+      }
+
+      .shadow {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 120px;
+        transition: .5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+      }
+
+      .label {
+        display: flex;
+        position: absolute;
+        right: 0;
+        height: 40px;
+        transition: .5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+
+        .icon {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          min-width: 40px;
+          max-width: 40px;
+          height: 40px;
+          border-radius: 100%;
+          background-color: white;
+          color: black;
+        }
+
+        .info {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin-left: 10px;
+          color: white;
+          white-space: pre;
+
+          > div {
+            position: relative;
+            transition: .5s cubic-bezier(0.05, 0.61, 0.41, 0.95), opacity .5s ease-out;
+          }
+
+          .main {
+            font-weight: bold;
+            font-size: 1.2rem;
+          }
+
+          .sub {
+            transition-delay: .1s;
+          }
+        }
+      }
+    }
+  }
+
+ul {
+  position: fixed;
+  text-align: center;
+}
+
+li {
+  display: flex;
+  padding: 25px 0;
+}
+
+li a {
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  border: #080808;
+  transition: 0.5s;
+  margin-left: 10px;
+
+  display: inline-block;
+  padding: 15px 20px;
+  position: fixed;
+}
+
+li a:after {
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: black;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+li a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+
+.city_h {
+  font-size: 25px;
+}
+
+
+.city_text {
+  font-size: 15px;
+}
+
+.container_city {
+  position: relative;
+  border-radius: 50px;
+  padding: 15px 60px;
+  margin-left: 120px;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #000000;
+  box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+  transition: 0.5s;
+}
+
+.last_one {
+  margin-top: 10px;
+}
+
