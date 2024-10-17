@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IvanenkoLab04-3</title>
+    <style>
+        body 
+        {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('KITIK.jpg');
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat;
+        }
+
+        .line 
+        {
+            width: 100px;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .text 
+        {
+            position: absolute;
+            font-size: 18px;
+            animation: moveUp 3s infinite;
+        }
+
+        @keyframes moveUp 
+        {
+            0% 
+            {
+                top: 100%;
+            }
+            50% 
+            {
+                top: 0;
+            }
+            100% 
+            {
+                top: 100%;
+            }
+        }
+
+        .line2 .text 
+        {
+            animation: moveBottomToTop 4s infinite linear;
+        }
+
+        @keyframes moveBottomToTop 
+        {
+            0%
+            {
+                top: 100%;
+            }
+            100% 
+            {
+                top: -100%;
+            }
+        }
+
+        .line3 .text 
+        {
+            animation: moveTopToBottomWithStop 5s infinite;
+        }
+
+        @keyframes moveTopToBottomWithStop 
+        {
+            0% 
+            {
+                top: -100%;
+            }
+            90% 
+            {
+                top: 100%;
+            }
+            100% 
+            {
+                top: 100%;
+            }
+        }
+
+        .line4 .text 
+        {
+            animation: moveUpWithDelay 5s infinite;
+            animation-delay: 1s;
+        }
+
+        @keyframes moveUpWithDelay 
+        {
+            0% 
+            {
+                top: 100%;
+            }
+            50% 
+            {
+                top: 0;
+            }
+            100% 
+            {
+                top: 100%;
+            }
+        }
+
+        .line5 .text 
+        {
+
+            animation: moveUpWithMoreDelay 6s infinite;
+            animation-delay: 2s;
+        }
+
+        @keyframes moveUpWithMoreDelay 
+        {
+            0% 
+            {
+                top: 100%;
+            }
+            50% 
+            {
+                top: 0;
+            }
+            100% 
+            {
+                top: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="line line1">
+        <div class="text">Рядок 1 (Коливання)</div>
+    </div>
+
+    <div class="line line2">
+        <div class="text">Рядок 2 (Знизу догори)</div>
+    </div>
+
+    <div class="line line3">
+        <div class="text">Рядок 3 (Згори донизу із зупинкою)</div>
+    </div>
+
+    <div class="line line4">
+        <div class="text">Рядок 4 (Затримка 1)</div>
+    </div>
+
+    <div class="line line5">
+        <div class="text">Рядок 5 (Затримка 2)</div>
+    </div>
+
+</body>
+</html>
