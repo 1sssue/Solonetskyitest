@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Лабораторна робота №7 - Завдання 3</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <h2 align="center">Лабораторна робота №7 - Завдання 3</h2>
+
+    <form action="submission.html" method="POST">
+        <table bgcolor="#E0FFFF" border="1" cellpadding="5" cellspacing="3" align="center" >
+            <tr>
+                <td colspan="3">
+                    <font color="red">
+                        <h1 align="center">
+                            Замовлення товару
+                        </h1>
+                    </font>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" valign="top">1.</td>
+                <td valign="top" valign="top">Номер банківського рахунку</td>
+                <td><input type="text" pattern="\d*" required="required" title="тільки цифри" name="bank_account" size="50"></td>
+            </tr>
+            <tr>
+                <td valign="top" valign="top">2.</td>
+                <td valign="top" valign="top">Особистий номер користувача</td>
+                <td><input type="text" pattern="\d*" required="required" title="Не може бути пустим" name="user_id" size="50"></td>
+            </tr>
+            <tr>
+                <td valign="top" valign="top">3.</td>
+                <td valign="top" valign="top">Виберіть товар(и)</td>
+                <td>
+                    <select name="products" size="5" required="required" multiple>
+                        <option value="item1">Товар 1</option>
+                        <option value="item2">Товар 2</option>
+                        <option value="item3">Товар 3</option>
+                        <option value="item4">Товар 4</option>
+                        <option value="item5">Товар 5</option>
+                        <option value="item6">Товар 6</option>
+                        <option value="item7">Товар 7</option>
+                        <option value="item8">Товар 8</option>
+                        <option value="item9">Товар 9</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" valign="top">4.</td>
+                <td valign="top" valign="top">Ваш коментар</td>
+                <td><textarea name="comments" rows="5" cols="50"></textarea></td>
+            </tr>
+            <tr>
+                <td valign="top" valign="top">5.</td>
+                <td valign="top" valign="top">Вид оплати</td>
+                <td>
+                    <input type="radio" name="payment_method" value="cash" checked> Готівковий<br>
+                    <input type="radio" name="payment_method" value="non-cash"> Безготівковий
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" valign="top">6.</td>
+                <td valign="top" valign="top">Бажана додаткова інформація</td>
+                <td>
+                    <input type="checkbox" name="info_balance" value="yes"> Дані про залишки на рахунку<br>
+                    <input type="checkbox" name="info_payments" value="yes"> Список останніх виплат по рахунку
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" align="center">
+                    <input type="reset" value="Скасувати">
+                    <input type="submit" value="Надіслати замовлення">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
