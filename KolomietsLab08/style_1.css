@@ -1,0 +1,24 @@
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.p-1{
+    font-style: italic;
+    color: chartreuse;
+    text-align: center;
+    background-color: #bc6363;
+}
+
+.p-2{
+    color: coral;
+    text-decoration: overline;
+    text-align: right;
+}
+
+.p-3{
+    text-indent: 30px;
+    text-transform: capitalize;
+}
