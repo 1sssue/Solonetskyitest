@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Історія комп'ютерів</title>
+    <style>
+        body {
+            scroll-behavior: smooth; /* Додає плавну прокрутку */
+        }
+        .section-title {
+            font-size: 24px;
+            color: darkblue;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            transition: background-color 0.3s; /* Плавна зміна кольору фону */
+        }
+        .highlight {
+            background-color: yellow; /* Колір підсвітки */
+        }
+        .main-text {
+            font-size: 18px;
+            color: black;
+            line-height: 1.5;
+        }
+        .footnote {
+            font-size: 14px;
+            color: gray;
+            font-style: italic;
+        }
+        .menu {
+            font-size: 18px;
+            color: darkgreen;
+            margin-bottom: 15px;
+            list-style-type: none;
+            padding: 0;
+        }
+        .menu li {
+            padding: 5px 0;
+        }
+        .small {
+            font-size: 12px;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="section-title" id="history">Історія комп'ютерів</div>
+    <p class="main-text">
+        Комп'ютери мають багатогранну історію, що починається з ранніх механічних обчислювальних пристроїв 
+        і продовжується аж до сучасних потужних електронних машин.
+    </p>
+
+    <ul class="menu">
+        <li><a href="#origin" onclick="highlightSection('origin')">Витоки комп'ютерної техніки</a></li>
+        <li><a href="#development" onclick="highlightSection('development')">Розвиток цифрових комп'ютерів</a></li>
+        <li><a href="#modern" onclick="highlightSection('modern')">Сучасні комп'ютери</a></li>
+    </ul>
+
+    <div class="section-title" id="origin">Витоки комп'ютерної техніки</div>
+    <p class="main-text">
+        Перші механічні пристрої для обчислень були розроблені для спрощення роботи математиків і інженерів.
+        До них відносяться арифмометри і аналітичні машини.
+    </p>
+    <p class="footnote">Механічні обчислювальні пристрої відкрили шлях до електронних обчислювальних машин.</p>
+
+    <div class="section-title" id="development">Розвиток цифрових комп'ютерів</div>
+    <p class="main-text">
+        У середині 20-го століття з’явилися перші цифрові комп'ютери, які використовували електронні компоненти.
+        Наприклад, ENIAC став першим великим електронним цифровим комп'ютером, побудованим у 1940-х роках.
+    </p>
+    <p class="footnote">Він значно збільшив обчислювальні можливості і прискорив розвиток науки.</p>
+
+    <div class="section-title" id="modern">Сучасні комп'ютери</div>
+    <p class="main-text">
+        З розвитком інтегральних схем у 1970-х роках комп'ютери стали компактнішими та потужнішими. 
+        Сучасні комп'ютери використовують мікропроцесори та здатні виконувати мільярди операцій на секунду. 
+        Сьогодні комп'ютери використовуються в багатьох галузях, від медицини до космічних досліджень, 
+        а технології штучного інтелекту та квантові обчислення відкривають нові горизонти для комп'ютерної науки.
+    </p>
+    <p class="footnote">Сучасні комп'ютери є невід'ємною частиною життя людини та ключем до новітніх інновацій.</p>
+
+    <div class="small">
+        <p>Автор: Артем Зубченко</p>
+        <p>Адреса сторінки: /istorija-kompjuteriv.html</p>
+    </div>
+
+    <script>
+        function highlightSection(id) {
+            // Скидаємо підсвітку для всіх заголовків
+            document.querySelectorAll('.section-title').forEach(function (element) {
+                element.classList.remove('highlight');
+            });
+            // Додаємо підсвітку до вибраного заголовка
+            const sectionTitle = document.getElementById(id);
+            if (sectionTitle) {
+                sectionTitle.classList.add('highlight');
+            }
+        }
+    </script>
+</body>
+</html>
