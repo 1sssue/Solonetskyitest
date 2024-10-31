@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesnikova07-4</title>
+    <style>
+        body
+        {
+            background-color: #F1DCC9;
+            margin: 0; /* Вирівнювання країв */
+            padding: 0;
+        }
+        .color-bar
+        {
+            background-color: #6C2D2C;
+            width: 800px;
+            height: 100%;
+            top: 0px;
+            left: 0;
+            position:absolute;
+        }
+        img
+        {
+            align-items: center;
+            width: 600px;
+            height: 600px;
+            padding: 90px;
+            border-radius: 15%;
+        }
+        p
+        {
+            position: absolute;
+            top: 680px;
+            left: 150px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 24px;
+            color:#F1DCC9 ;
+        }
+        .p1
+        {
+            position: absolute;
+            top: 800px;
+            right: 150px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 20px;
+            color: #F1DCC9;
+            border:#9F4636 solid 2px ;
+            padding: 10px;
+        }
+        .p2
+        {
+            position: absolute;
+            top: 780px;
+            left: 210px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 18px;
+            color: #F1DCC9;
+        }
+        .p3
+        {
+            position: absolute;
+            top: 780px;
+            left: 470px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 18px;
+            color: #F1DCC9;
+        }
+        .p4
+        {
+            position: absolute;
+            top: 780px;
+            left: 335px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 18px;
+            color: #F1DCC9;
+        }
+        .grid-container
+        {
+            display: grid;
+            grid-template-rows: auto auto auto auto auto; 
+            background-color: #9F4636;
+            width: 600px;
+            height: auto;
+            position: relative;
+            top: 200px;
+            left: 1060px;
+            border-radius: 5%;
+        }
+        .grid-item1
+        {
+             width: 600px;
+             height: 90px;
+        }
+        .text1
+        {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 36px;
+            color: #F1DCC9;
+            text-align: center;
+            padding-top: 23px;
+        }
+        .text2
+        {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 24px;
+            color: #F1DCC9;
+        }
+        .text3
+        {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 19px;
+            color: #F1DCC9;
+            text-align: center;
+        }
+        .grid-item2
+        {
+            width: 600px;
+            height: 90px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 24px;
+            color: #F1DCC9;
+            padding: 10px;
+            margin-left: 45px;
+        }
+        .grid-item3
+        {
+            width: 600px;
+            height: 90px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 24px;
+            color: #F1DCC9;
+            padding: 10px;
+            margin-left: 45px;
+        }
+        .grid-item4
+        {
+            width: 600px;
+            height: 90px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 24px;
+            color: #F1DCC9;
+            padding: 10px;
+            margin-left: 45px;
+        }
+        .grid-item5
+        {
+            width: 600px;
+            height: 90px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 24px;
+            color: #F1DCC9;
+            padding: 10px;
+            margin-left: 170px;            
+        }
+        .order-button 
+        {
+            background-color: #42313A;
+            color: #F1DCC9; 
+            padding: 10px 42px;
+            text-align: center; 
+            font-family: 'Times New Roman', Times, serif;
+            text-decoration: none; 
+            font-size: 18px; 
+            margin: 3px 1px; 
+            cursor: pointer; 
+            border-radius: 12px; 
+            transition: background-color 0.3s;
+        }
+        .order-button:hover 
+        {
+            background-color: #503b46; 
+        }
+    </style>
+</head>
+<body>
+    <form action="server.html">
+    <div class="color-bar">
+        <img src="umbrella1.png" alt="UmbrellaBlack">
+        <p>
+            Парасоля-тростина Prime в трьох кольорах
+        </p>
+        <div class="p1">
+            399$
+        </div>
+        <div class="p2">
+            <label for="color-black">Black</label>
+            <input type="radio" id="black" name="color">
+        </div>
+        <div class="p3">
+            <label for="color-black">White</label>
+            <input type="radio" id="white" name="color">
+        </div>
+        <div class="p4">
+            <label for="color-black">Brown</label>
+            <input type="radio" id="brown" name="color">
+        </div>
+    </div>
+    <div class="grid-container">
+       <div class="grid-item1">
+            <div class="text1">
+                <b>Замовити</b> 
+            </div>
+       </div>
+       <div class="grid-item2">
+            <label for="card">Номер картки</label>
+            <input type="text" size="42">
+       </div>
+       <div class="grid-item3">
+        <label for="date">Строк придатності</label>
+        <input type="date">
+        <label for="cvv">СVV-код</label>
+        <input type="text" size="3">
+       </div>
+       <div class="grid-item4">
+        <div class="text2">
+            Оберіть спосіб оплати
+        </div>
+        <div class="text3">
+            <label for="1">Карткою зараз</label>
+            <input type="checkbox" name="1" value="">
+            <label for="2">Після отримання</label>
+            <input type="checkbox" name="2">
+        </div>
+       </div>
+       <div class="grid-item5">
+            <input type="button" value="Зробити замовлення" onclick="window.location.href='server.html';" class="order-button">
+       </div>
+    </div>
+</form>
+</body>
+</html>
