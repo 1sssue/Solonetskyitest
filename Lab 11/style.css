@@ -1,0 +1,53 @@
+/* Загальні налаштування */
+body {
+    background-image: url("images/Background.jpg"); 
+    background-size: cover;
+    background-attachment: fixed;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-style: italic;
+    font-size: 16px;
+}
+
+/* Стиль для заголовків першого рівня */
+h1 {
+    font-weight: bold;
+    text-align: center;
+    color: #2b2b2b; /* Визначений колір */
+    font-style: normal;
+}
+
+/* Абзаци: "червоний рядок" і вирівнювання по ширині */
+p {
+    text-indent: 20px;
+    text-align: justify;
+}
+
+/* Стиль для зображень */
+img.left {
+    float: left;
+    margin-right: 10px;
+}
+img.right {
+    float: right;
+    margin-left: 10px;
+}
+
+/* Стилі для посилань */
+a:link {
+    color: blue;
+    text-decoration: none;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+a:active {
+    color: green;
+}
