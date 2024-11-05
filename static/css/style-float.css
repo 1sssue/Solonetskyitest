@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+.wrapper {
+    height: 100vh;
+}
+
+.block {
+    display: inline-block;
+    box-sizing: border-box;
+    border: 1px solid whitesmoke;
+    margin: 1.5px;
+}
+
+.blue {
+    background-color: cornflowerblue;
+    width: calc(80% - 3px);
+    height: calc(25% - 3px);
+    float: left;
+}
+
+.gray {
+    background-color: gray;
+    width: calc(20% - 3px);
+    height: calc(75% - 3px);
+    float: right;
+}
+
+.turquoise {
+    background-color: darkturquoise;
+    width: calc(25% - 3px);
+    height: calc(25% - 3px);
+    float: left;
+}
+
+.red {
+    background-color: indianred;
+    width: calc(25% - 3px);
+    height: calc(25% - 3px);
+    float: left;
+}
+
+.yellow {
+    background-color: gold;
+    width: calc(30% - 3px);
+    height: calc(50% - 3px);
+    float: right;
+}
+
+.green {
+    background-color: seagreen;
+    width: calc(50% - 3px);
+    height: calc(25% - 3px);
+    float: left;
+}
+
+.orange {
+    background-color: chocolate;
+    width: calc(100% - 3px);
+    height: calc(25% - 3px);
+    float: left;
+}
+
+@media (max-width: 499px) {
+    .blue {
+        width: calc(100% - 3px);
+        height: calc(20% - 3px);
+    }
+    .gray, .turquoise, .red, .green, .yellow {
+        width: calc(100% - 3px);
+        height: calc(14% - 3px);
+    }
+    .orange {
+        width: calc(100% - 3px);
+        height: calc(10% - 3px);
+    }
+}
+
+@media (min-width: 500px) and (max-width: 749px) {
+    .blue, .gray {
+        width: calc(50% - 3px);
+        height: calc(25% - 3px);
+    }
+    .turquoise, .red, .green, .yellow {
+        width: calc(50% - 3px);
+        height: calc(30% - 3px);
+    }
+    .orange {
+        width: calc(100% - 3px);
+        height: calc(15% - 3px);
+    }
+}
+
+@media (min-width: 750px) and (max-width: 949px) {
+    .blue {
+        width: calc(100% - 3px);
+        height: calc(25% - 3px);
+    }
+    .gray {
+        width: calc(30% - 3px);
+        height: calc(50% - 3px);
+    }
+    .turquoise, .red, .yellow, .green {
+        width: calc(35% - 3px);
+        height: calc(25% - 3px);
+    }
+    .orange {
+        width: calc(100% - 3px);
+        height: calc(25% - 3px);
+    }
+}
+
+@media (min-width: 950px) and (max-width: 1199px) {
+    .blue {
+        width: calc(70% - 3px);
+        height: calc(25% - 3px);
+    }
+    .gray {
+        width: calc(30% - 3px);
+        height: calc(75% - 3px);
+    }
+    .turquoise, .red {
+        width: calc(35% - 3px);
+    }
+    .yellow {
+        width: calc(35% - 3px);
+        height: calc(25% - 3px);
+    }
+    .green {
+        width: calc(35% - 3px);
+    }
+}
