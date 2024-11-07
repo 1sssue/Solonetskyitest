@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Батьківщина</title>
+        <style>
+            .photo-container {
+                display: inline-block;
+                margin: 10px;
+                position: relative;
+            }
+            .photo-container img {
+                width: 300px;
+                height: auto;
+            }
+            .tooltip {
+                visibility: hidden;
+                background-color: rgba(0, 0, 0, 0.7);
+                color: #fff;
+                text-align: center;
+                padding: 5px;
+                border-radius: 5px;
+                position: absolute;
+                bottom: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 80%;
+                z-index: 1;
+            }
+            .photo-container:hover .tooltip {
+                visibility: visible;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="myahkohlibLab06-4.html">До меню</a>
+        <h1 style="text-align: center;">Моя Батьківщина</h1>
+        <div class="photo-container">
+            <img src="Image/centr.jpg" alt="Місцевість 1">
+            <div class="tooltip">Кругла площа — історичний майдан у Полтаві, композиційний центр і символ міста.</div>
+        </div>
+        <div class="photo-container">
+            <img src="Image/altanka.jpg" alt="Місцевість 2">
+            <div class="tooltip">Біла альтанка — оригінальна пам'ятка у формі альтанки з колонадою в місті Полтаві.</div>
+        </div>
+        <div class="photo-container">
+            <img src="Image/mcdonalds.png" alt="Місцевість 3">
+            <div class="tooltip">Відома мережа класичних закладів швидкого харчування, що славиться гамбургерами та картоплею фрі.</div>
+        </div>
+    </body>
+</html>

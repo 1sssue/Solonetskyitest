@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Форма замовлення</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 20px;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 2px solid #000;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="number"], textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="checkbox"], input[type="radio"] {
+            margin-right: 10px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Форма замовлення</h2>
+    <form action="" method="post">
+        <label for="account-number">Номер банківського рахунку:</label>
+        <input type="text" id="account-number" name="account-number" required>
+
+        <label for="personal-id">Особистий номер користувача:</label>
+        <input type="text" id="personal-id" name="personal-id" required>
+
+        <label for="product">Виберіть товар:</label>
+        <select id="product" name="product" multiple required>
+            <option value="laptop">Ноутбук Dell XPS 13</option>
+            <option value="smartphone">Смартфон Apple iPhone 13</option>
+            <option value="tablet">Планшет Samsung Galaxy Tab S7</option>
+            <option value="headphones">Навушники Sony WH-1000XM4</option>
+            <option value="smartwatch">Розумний годинник Garmin Fenix 6</option>
+            <option value="monitor">Монітор LG UltraFine 4K</option>
+        </select>
+
+        <label for="comments">Коментарі:</label>
+        <textarea id="comments" name="comments" rows="4"></textarea>
+
+        <label>Вид оплати:</label>
+        <label><input type="radio" name="payment-method" value="cash" required> Готівковий</label>
+        <label><input type="radio" name="payment-method" value="cashless"> Безготівковий</label>
+
+        <label>Додаткова інформація:</label>
+        <label><input type="checkbox" name="account-balance" value="yes"> Дані про залишки на рахунку</label>
+        <label><input type="checkbox" name="recent-payments" value="yes"> Список останніх виплат по рахунку</label>
+
+        <button type="submit">Надіслати замовлення</button>
+    </form>
+</div>
+
+</body>
+</html>

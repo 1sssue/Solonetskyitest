@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мої друзі</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            margin-top: 20px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1000px;
+            padding: 20px;
+        }
+        .friend {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 250px;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s;
+        }
+        .friend:hover {
+            box-shadow: 0 6px 12px rgba(180, 7, 7, 0.15);
+        }
+        .friend img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        .friend h2 {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .friend p {
+            font-size: 0.9em;
+            color: #666;
+        }
+        .navbar {
+            background-color: #333;
+            width: 100%;
+            padding: 10px;
+            position: sticky;
+            top: 0;
+        }
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .navbar a:hover {
+            background-color: #575757;
+        }
+    </style>
+</head>
+<body>
+
+ 
+    <div class="navbar">
+        <a href="#Dasha">Дар'я</a>
+        <a href="#timchik">Владлен та Анастасія</a>
+        <a href="#vlad">Влад</a>
+    </div>
+
+    <h1>Мої друзі</h1>
+
+    <div class="container">
+        
+        <div class="friend" id="#Dasha">
+            <img src="Image/Dasha.jpg" alt="Фото Дар'ї">
+            <h2>Дар'я</h2>
+            <p>Моя дівчнина з якою я разом живу, я її дуже сильно кохаю. Вонa захоплюються кіно та історією.</p>
+        </div>
+
+        <div class="friend" id="timchik">
+            <img src="Image/team.jpg" alt="Фото team">
+            <h2>Владлен та Анастасія</h2>
+            <p>Ми разом проводимо час в унівеерситеті. Вони дуже розумні та захоплюються ІТ-технолігіями</p>
+        </div>
+
+       
+        <div class="friend" id="vlad">
+            <img src="Image/vlad.jpg" alt="Фото Влада">
+            <h2>Влад</h2>
+            <p>Мій одногрупник з яким я добре спілкуюся. Завджи допоможе. Захоплюються автомобілями</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
