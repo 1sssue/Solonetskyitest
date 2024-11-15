@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заявка на товар</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 20px;
+        }
+        .form-wrapper {
+            background-color: #d9f1ff;
+            border: 2px solid #005b99;
+            padding: 25px;
+            border-radius: 12px;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+        input[type="text"], input[type="number"], input[type="email"], select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 12px 0;
+            border: 2px solid #b0e0e6;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+        input[type="checkbox"] {
+            margin-right: 8px;
+        }
+        input[type="submit"], input[type="reset"] {
+            background-color: #005b99;
+            color: white;
+            padding: 12px 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background-color: #003f6b;
+        }
+        h2 {
+            color: #005b99;
+            text-align: center;
+        }
+        label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-wrapper">
+        <h2>Заявка на покупку товарів</h2>
+        <form action="#" method="post">
+            <label for="accountNumber">Номер вашого рахунку:</label>
+            <input type="text" id="accountNumber" name="accountNumber" required>
+
+            <label for="userNumber">Особистий ідентифікатор:</label>
+            <input type="text" id="userNumber" name="userNumber" required>
+
+            <label>Оберіть товари для замовлення:</label><br>
+            <input type="checkbox" id="product1" name="products[]" value="product1">
+            <label for="product1">Продукт 1</label><br>
+            <input type="checkbox" id="product2" name="products[]" value="product2">
+            <label for="product2">Продукт 2</label><br>
+            <input type="checkbox" id="product3" name="products[]" value="product3">
+            <label for="product3">Продукт 3</label><br>
+            <input type="checkbox" id="product4" name="products[]" value="product4">
+            <label for="product4">Продукт 4</label><br>
+            <input type="checkbox" id="product5" name="products[]" value="product5">
+            <label for="product5">Продукт 5</label><br>
+
+            <label for="comments">Ваші коментарі:</label>
+            <textarea id="comments" name="comments" rows="4" placeholder="Залиште свої зауваження тут"></textarea>
+
+            <label>Спосіб оплати:</label>
+            <input type="radio" id="cash" name="paymentMethod" value="cash" required>
+            <label for="cash">Готівкою</label>
+            <input type="radio" id="nonCash" name="paymentMethod" value="nonCash">
+            <label for="nonCash">Безготівковий</label>
+
+            <br><br>
+
+            <label>Додаткові опції:</label><br>
+            <input type="checkbox" id="balanceInfo" name="info[]" value="balance">
+            <label for="balanceInfo">Інформація про баланс</label><br>
+            <input type="checkbox" id="paymentsInfo" name="info[]" value="payments">
+            <label for="paymentsInfo">Перелік останніх оплат</label>
+
+            <br><br>
+
+            <input type="submit" value="Відправити заявку">
+            <input type="reset" value="Очистити форму">
+        </form>
+    </div>
+
+</body>
+</html>
