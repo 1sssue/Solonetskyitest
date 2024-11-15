@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мій Тростянець</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #a4f195;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #1b9b9b;
+        }
+        p {
+            text-align: center;
+            font-size: 18px;
+        }
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        .image-container img {
+            border: 2px solid #2e8b57;
+            border-radius: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Тростянець - місто Герой!</h1>
+<p>Тростянець — місто що вистояло пробувши в окупації більше 3 місяців, не давши ворогу просунутись далі</p>
+<p>Тростянець — місто що заворожує своїми краєвидами.</p>
+<p>Тростянець — місто що не дає передихнути своїми фестивалями.</p>
+
+<!-- Перша картинка з картою -->
+<div class="image-container">
+    <img src="image/ocupation.jpg" width="400" height="300" usemap="#map-slava" alt="Окупація">
+    <map name="map-slava">
+        <area shape="rect" coords="0,0,400,150" href="#" title="Роздроблений в щент автовокзал">
+        <area shape="rect" coords="0,150,400,300" href="#" title="Знищена САУ рашистів у Тростянці">
+    </map>
+
+    <!-- Друга картинка з картою -->
+    <img src="image/kraevid.jpg" width="400" height="300" usemap="#map-park" alt="Нескучне">
+    <map name="map-park">
+        <area shape="rect" coords="0,0,400,150" href="#" title="Сосновий ліс дендропарка Нескучне ">
+        <area shape="rect" coords="0,150,400,300" href="#" title="Один з 4 ставків дендропарка">
+    </map>
+
+    <!-- Третя картинка з картою -->
+    <img src="image/festival.jpg" width="400" height="300" usemap="#map-theatre" alt="Фестиваль">
+    <map name="map-theatre">
+        <area shape="rect" coords="0,0,400,150" href="#" title="Круглий двір - основне місце проводження заходів">
+        <area shape="rect" coords="0,150,400,300" href="#" title="Фестиваль Схід-Рок, що проводився кожного року">
+    </map>
+</div>
+
+</body>
+</html>
