@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма Замовлення</title>
+    <link rel="stylesheet" href="/Task3/main.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1 style="text-decoration: underline;">Форма Замовлення</h1>
+        <form id="order-form" action="#" method="post">
+            <!-- Bank Account Number -->
+            <label for="bank-account">Номер банківського рахунку:</label>
+            <input type="text" id="bank-account" name="bank-account" required>
+
+            <!-- Personal User ID -->
+            <label for="user-id">Особистий номер користувача:</label>
+            <input type="text" id="user-id" name="user-id" required>
+
+            <!-- Product Selection -->
+            <label for="products">Виберіть товари:</label>
+            <select id="products" name="products" multiple>
+                <option value="product1">Товар 1</option>
+                <option value="product2">Товар 2</option>
+                <option value="product3">Товар 3</option>
+                <option value="product4">Товар 4</option>
+            </select>
+
+            <!-- User Comments -->
+            <label for="comments">Коментарі:</label>
+            <textarea id="comments" name="comments" rows="4" placeholder="Ваші коментарі..."></textarea>
+
+            <!-- Payment Method -->
+            <fieldset>
+                <legend>Вид оплати:</legend>
+                <label><input type="radio" name="payment-method" value="cash" required> Готівковий</label>
+                <label><input type="radio" name="payment-method" value="non-cash" required> Безготівковий</label>
+            </fieldset>
+
+
+            
+            <!-- Additional Information -->
+            <fieldset>
+                <legend>Додаткова інформація:</legend>
+                <label><input type="checkbox" name="additional-info" value="balance"> Дані про залишки на рахунку</label>
+                <label><input type="checkbox" name="additional-info" value="payments"> Список останніх виплат по рахунку</label>
+            </fieldset>
+
+            <!-- Submit Button -->
+            <button type="submit">Відправити замовлення</button>
+        </form>
+        <!-- Submission Confirmation Message -->
+        <p id="confirmation-message" style="display: none; color: green; font-weight: bold;">Відправлено!</p>
+    </div>
+
+    <!-- JavaScript Section -->
+    <script>
+        // Function to handle form submission
+        document.getElementById("order-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent actual form submission
+            document.getElementById("confirmation-message").style.display = "block"; // Show confirmation message
+        });
+    </script>
+</body>
+</html>

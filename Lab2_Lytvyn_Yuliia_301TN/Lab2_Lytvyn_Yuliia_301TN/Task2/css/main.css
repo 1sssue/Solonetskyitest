@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Comfortaa", sans-serif;
+}
+
+body {
+    background-image: url('/Task2/img/background.jpg'); /* Вказуємо шлях до картинки */
+    background-size: cover; /* Картинка заповнює весь екран */
+    background-position: center; 
+    background-attachment: fixed; /* Картинка не рухається при прокручуванні сторінки */
+    height: 100%;
+    margin: 0; /* Видаляємо відступи для body */
+}
+
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border: 2px solid rgb(12, 24, 112);
+    margin: 10px 10px;
+    padding: 5px 10px;
+    background-color: rgb(207, 220, 181);
+    margin-bottom: 20px;
+  }
+
+img {
+    margin: 15px;
+}
+
+h1 {
+    font-size: 40px;
+    color: rgb(28, 41, 41);
+    text-decoration: underline; /*підкреслення*/
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 30px;
+    line-height: 1.5; /*відстань між рядками*/
+    text-align: justify; /*вирівнювання за шириною*/
+}
