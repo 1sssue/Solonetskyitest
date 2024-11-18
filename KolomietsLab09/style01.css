@@ -1,0 +1,57 @@
+.class01{
+    font-size: 12px;
+    color: cornflowerblue;
+    font-style: oblique;
+    font-weight: 500;
+}
+
+.class02{
+    font-size: 20px;
+    color:coral;
+    font-style:unset;
+    font-weight: 400;
+}
+
+.class03{
+    font-size: 24px;
+    color:aqua;
+    font-weight: 300;
+}
+
+.title{
+    font-size: 32px;
+    color: chocolate;
+    text-decoration:underline;
+}
+
+.desc{
+    font-size: 24px;
+    color:brown;
+    font-weight: 300;
+    text-indent: 2%;
+}
+
+.note{
+    font-size: 16px;
+    color:darksalmon;
+    text-decoration:line-through;
+    text-indent: 2%;
+}
+
+.menu-text {
+    font-size: 16px;
+    color:chartreuse;
+    font-weight: bold;
+}
+
+.info-text {
+    font-size: 12px;
+    color:aquamarine;
+    font-style: italic;
+}
+
+.back-to-top {
+    font-size: 14px;
+    color:darkseagreen;
+    text-decoration: underline;
+}

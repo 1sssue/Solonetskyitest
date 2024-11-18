@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif ;
+    background-image: url("img/depositphotos_11001740-stock-photo-paper-texture-hi-res-background.jpg");
+}
+
+header{
+    margin: 24px;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    gap: 42px;
+}
+
+nav a{
+   color: rgb(31, 33, 148);
+   text-decoration: none;
+}
+
+.content{
+   text-align: center;
+}
+
+
+.content h1{
+    padding: 24px;
+    font-weight: 700;
+    color: darkslateblue;
+    font-size: 42px;
+}
+
+.content p{
+    text-indent: 40px;
+    padding: 24px;
+    text-align: justify;
+    margin: 24px;
+    font-style: italic;
+    font-size: 21px;
+}
+
+.page1{
+    float: right;
+    margin-left: 24px;
+    margin-bottom: 10px;
+    width: 600px;
+}
+
+.page2{
+    float: left;
+    margin-right: 24px;
+    margin-bottom: 10px;
+    width: 600px;
+}
+
+.list{
+    display: inline-block;
+    margin-top: 24px;
+}
+
+.list-skills{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+
+.list-item img{
+    width: 300px;
+}

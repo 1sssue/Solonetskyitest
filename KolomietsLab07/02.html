@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kolomiets Lab 07-2</title>
+    <style>
+        body{
+            align-items: center;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        form{
+            display: flex;
+            justify-content: center;
+        }
+
+        input{
+            display: flex;
+            padding: 10px 24px 10px 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            margin-top: 3px;
+            font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .button input{
+            display: inline-block;
+            justify-content: space-around;
+            margin-top: 12px;
+            font-size: 16px;
+            padding: 10px 24px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Анкета</h1>
+    <form action="#">
+        <div>
+            <label for="last_name">Last name</label>
+            <input type="text" name="last_name" id="last_name" placeholder="Last name">
+        
+<br>
+        <div>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="Name">
+        </div>
+<br>      
+        <div>
+            <label for="birth">Date of birth</label>
+            <input type="date" name="birth" id="birth" placeholder="Date of birth">
+        </div>
+<br>         
+        <div>
+            <label for="home_address">Home address</label>
+            <input type="text" name="home_address" id="home_address" placeholder="Home address">
+        </div>
+<br>         
+        <div>
+            <label for="phone">Home (work) phone</label>
+            <input type="tel" name="phone" id="phone" placeholder="Home (work) phone">
+        </div>
+<br>         
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Email">
+        </div>
+
+<br>         
+        <div>
+            <label for="interests">Field of scientific interests</label>
+            <input type="text" name="interests" id="interests" placeholder="Field of scientific interests">
+            <input type="text" name="interests" id="interests" placeholder="Field of scientific interests">
+            <input type="text" name="interests" id="interests" placeholder="Field of scientific interests">
+            <input type="text" name="interests" id="interests" placeholder="Field of scientific interests">
+            <input type="text" name="interests" id="interests" placeholder="Field of scientific interests">
+            <input type="text" name="interests" id="interests" placeholder="Field of scientific interests">
+        </div>
+
+        <div class="button">
+            <input type="submit" value="Sent">
+            <input type="reset" value="Reset">
+        </div>
+        
+    </form>
+</body>
+</html> 
