@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Лабораторна робота №7 - Завдання 1</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <h2 align="center">Лабораторна робота №7 - Завдання 1</h2>
+
+    <form action="submission.html" method="POST" target="_blank" align="center">
+        <label for="name">Ваше ім'я:</label><br>
+        <input type="text" id="name" name="name" value="Іванов Іван Іванович" size="30" maxlength="40"><br><br>
+
+        <label for="password">Введіть пароль:</label><br>
+        <input type="password" id="password" size="8" maxlength="10"><br><br>
+
+        <label for="address">Ваша адреса:</label><br>
+        <textarea id="address" name="address" cols="30" rows="3" wrap="virtual">Ваша адреса...</textarea><br><br>
+
+        <label for="week">Виберіть день тижня:</label><br>
+        <select id="week" name="week" size="7">
+            <option value="1">Понеділок</option>
+            <option value="2">Вівторок</option>
+            <option value="3">Середа</option>
+            <option value="4">Четвер</option>
+            <option value="5">П’ятниця</option>
+            <option value="6">Субота</option>
+            <option value="7">Неділя</option>
+        </select><br><br>
+
+        <p>Укажіть Ваші навички:</p><br>
+        <input type="checkbox" name="skill" value="HTML" checked> HTML<br>
+        <input type="checkbox" name="skill" value="JavaScript"> JavaScript<br>
+        <input type="checkbox" name="skill" value="Perl"> Perl<br>
+        <input type="checkbox" name="skill" value="XML"> XML<br>
+        <input type="checkbox" name="skill" value="FLASH"> FLASH<br><br>
+
+        <p>Виберіть стать:</p><br>
+        <input type="radio" name="gender" value="male" checked> Чоловіча<br>
+        <input type="radio" name="gender" value="female"> Жіноча<br><br>
+
+        <p>Прикріпіть файл:</p><br>
+        <input type="file" name="file" size="50" accept="application/msword, text/plain"><br><br>
+
+        <input type="submit" value="Відправити дані"><br>
+        <input type="reset" value="Скасувати ввід"><br><br>
+
+        <input type="button" value="Показати сьогоднішнє число" onclick="alert(Date());">
+    </form>
+</body>
+</html>
