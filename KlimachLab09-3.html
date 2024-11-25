@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Лабораторна робота №9 - Завдання 3</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            background-color: #f5f5f0;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h2.infolab {
+            font-size: x-large;
+            color: black;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .menu {
+            font-size: 18px;
+            color: #003366;
+            font-family: 'Tahoma', sans-serif; 
+            font-weight: bold;
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .menu-item {
+            margin: 10px 0;
+            padding: 10px 15px;
+            border: 1px solid #003366;
+            border-radius: 5px;
+            background-color: #e6f2ff;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+
+        .menu-item:hover {
+            background-color: #cce0ff; 
+            color: #000066;
+            cursor: pointer;
+        }
+
+        .small {
+            font-size: 12px;
+            color: #666666;
+            font-family: 'Arial', sans-serif;
+            font-style: italic;
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 class="infolab">Лабораторна робота №9 - Завдання 3</h2>
+
+    <ul class="menu">
+        <li class="menu-item">Елемент меню 1</li>
+        <li class="menu-item">Елемент меню 2</li>
+        <li class="menu-item">Елемент меню 3</li>
+        <li class="menu-item">Елемент меню 4</li>
+    </ul>
+
+    <p class="small">Адреса сторінки: <a id="addressLink"></a></p>
+    <p class="small">Автор: Клімач Олександр 101-пТК</p>
+
+    <script>
+        document.getElementById("addressLink").href = window.location.href
+        document.getElementById("addressLink").innerText = window.location.href
+    </script>
+</html>
