@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Одногрупники</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+         align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            }
+
+        .image-container {
+            position: relative;
+            display: inline-block;
+            text-align: center;
+            }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .friend-info {
+            display: none;
+            position: absolute;
+            background-color: rgba(240, 240, 240, 0.9);
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 10;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .image-container {
+            position: relative;
+            display: inline-block;
+        }
+        area:hover + .friend-info {
+            display: block;
+        }
+        /* Межі для візуалізації областей */
+        area {
+            outline: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Мої одногрупники</h1>
+    <div class="image-container">
+        <img src="group-photo.jpg" alt="Фото групи" usemap="#friendsMap">
+
+        <map name="friendsMap">
+            <area shape="rect" coords="350,600,0,130" alt="Перша особа" title="Лєра" href="#">
+            <area shape="rect" coords="485,350,410,256" alt="Друга особа" title="Максим" href="#">
+            <area shape="rect" coords="610,413,540,354" alt="Третя особа" title="Вадим" href="#">
+            <area shape="rect" coords="663,640,500,420" alt="Четверта особа" title="Даша" href="#">
+            <area shape="rect" coords="692,372,633,300" alt="П'ята особа" title="Максим" href="#">
+            <area shape="rect" coords="775,400,705,315" alt="Шоста особа" title="Даня" href="#">
+            <area shape="rect" coords="945,431,840,294" alt="Сьома особа" title="Я (Діма)" href="#">
+            <area shape="rect" coords="1071,400,970,277" alt="Восьма особа" title="Нікіта" href="#">
+            <area shape="rect" coords="1278,505,1090,306" alt="Дев'ята особа" title="Таня" href="#">
+            <area shape="rect" coords="484,475,407,374" alt="Десята особа" title="Даня" href="#">
+            <area shape="rect" coords="1148,821,896,535" alt="Одинадцята особа" title="Настя" href="#">
+        </map>
+    </div>
+</body>
+</html>

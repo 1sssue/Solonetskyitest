@@ -1,0 +1,55 @@
+/* Встановлення фонового зображення сторінки */
+body {
+    background-image: url('background.jpg'); /* Замість 'background.jpg' підставте шлях до вашого зображення */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 20px; /* відступи зліва та справа */
+}
+
+/* Стиль для абзаців */
+p {
+    text-align: justify; /* вирівнювання по ширині */
+    text-indent: 2em; /* "червоний рядок" */
+    margin-left: 20px; /* відстань від тексту до границь вікна */
+    margin-right: 20px;
+    font-style: italic; /* курсив */
+    font-size: 16px; /* розмір тексту */
+}
+
+/* Заголовок 1-го рівня */
+h1 {
+    text-align: center; /* вирівнювання по центру */
+    font-weight: bold; /* жирний текст */
+    color: #3498db; /* будь-який колір за вашим вибором */
+    font-style: normal; /* нормальний стиль */
+}
+
+/* Стиль для зображень */
+img {
+    display: block;
+    margin: 10px auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Стилі для посилань */
+a:link {
+    color: #1abc9c; /* колір для не відвіданих посилань */
+    text-decoration: none;
+}
+
+a:visited {
+    color: #9b59b6; /* колір для відвіданих посилань */
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #e74c3c; /* колір при наведенні */
+    text-decoration: underline;
+}
+
+a:active {
+    color: #2ecc71; /* колір активного посилання */
+    text-decoration: none;
+}

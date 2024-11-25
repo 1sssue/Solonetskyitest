@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>П’ять горизонтальних рядків із текстом, які біжать</title>
+    <meta name="description" content="Лабораторна робота з HTML: біжучий текст">
+    <style>
+        body {
+            background-color: #f0f8ff; /* Основний фон сторінки */
+            font-family: Arial, sans-serif;
+        }
+        .marquee-container {
+            width: 100%;
+            height: 50px;
+            overflow: hidden;
+            position: relative;
+            margin: 10px 0;
+        }
+        .marquee-text {
+            position: absolute;
+            white-space: nowrap;
+        }
+        .bounce {
+            background-color: #ffcccc;
+            color: #00008b;
+            animation: bounce 3s ease-in-out infinite;
+        }
+        @keyframes bounce {
+            0% { left: 0; }
+            50% { left: calc(100% - 200px); }
+            100% { left: 0; }
+        }
+        .right-to-left {
+            background-color: #ccffcc;
+            color: #d2691e;
+            animation: rightToLeft 7s linear infinite;
+        }
+        @keyframes rightToLeft {
+            0% { left: 100%; }
+            100% { left: -100%; }
+        }
+        .left-to-right-stop {
+            background-color: #ccccff;
+            color: #8b0000;
+            animation: leftToRightStop 5s linear forwards;
+        }
+        @keyframes leftToRightStop {
+            0% { left: -100%; }
+            100% { left: calc(100% - 200px); } /* Текст зупиняється при досягненні кінця */
+        }
+        .delayed-1 {
+            background-color: #ffe4b5;
+            color: #2e8b57;
+            animation: delayedMove1 10s linear infinite;
+        }
+        @keyframes delayedMove1 {
+            0% { left: 100%; }
+            100% { left: -100%; }
+        }
+        .delayed-2 {
+            background-color: #dcdcdc;
+            color: #000080;
+            animation: delayedMove2 15s linear infinite;
+        }
+        @keyframes delayedMove2 {
+            0% { left: 100%; }
+            100% { left: -100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="marquee-container">
+        <div class="marquee-text bounce">Це текст, який коливається з боку в бік</div>
+    </div>
+    <div class="marquee-container">
+        <div class="marquee-text right-to-left">Текст, що пробігає справа наліво і з'являється знову</div>
+    </div>
+    <div class="marquee-container">
+        <div class="marquee-text left-to-right-stop">Текст пробігає зліва направо і зупиняється</div>
+    </div>
+    <div class="marquee-container">
+        <div class="marquee-text delayed-1">Текст рухається з невеликим запізненням</div>
+    </div>
+    <div class="marquee-container">
+        <div class="marquee-text delayed-2">Текст рухається з довшим запізненням</div>
+    </div>
+</body>
+</html>

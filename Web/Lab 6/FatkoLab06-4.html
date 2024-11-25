@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Інтерактивне зображення</title>
+    <style>
+        body {
+            background-color: #f0f8ff;
+            color: #333333; 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6;
+        }
+        h1 {
+            color: #00509e;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Інтерактивне зображення з посиланнями</h1>
+    <p>Натисніть на фігури, щоб перейти на відповідну сторінку:</p>
+
+    <!-- Зображення з картою -->
+    <map name="shapeMap">
+        <area shape="rect" coords="20,20,120,100" href="FatkoLab01-9.html" title="Домашня сторінка">
+        <area shape="circle" coords="200,80,50" href="FatkoLab05-3.html" title="Мої гіперпосилання">
+        <area shape="poly" coords="300,20,350,60,330,110,270,90" href="FatkoLab06-3.html" title="Моя Батьківщина">
+    </map>
+    <img src="shapes.png" width="400" height="300" alt="Інтерактивне зображення" usemap="#shapeMap">
+</body>
+</html>

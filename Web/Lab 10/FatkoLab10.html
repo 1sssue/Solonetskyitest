@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Адаптивна сторінка</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3px;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .item {
+            border: 1px solid #ffffff; /* Білий обвід */
+        }
+
+        @media screen and (min-width:1200px) {
+            .item:nth-child(1) {
+                background-color: #5a9bd6;
+                grid-column: 1 / 4;
+            } /* Синій */
+
+            .item:nth-child(2) {
+                background-color: #6e797f;
+                grid-column: 4 / 5;
+                grid-row: 1 / 4;
+            } /* Сірий */
+
+            .item:nth-child(4) {
+                background-color: #e65f65;
+            } /* Червоний */
+
+            .item:nth-child(3) {
+                background-color: #5bcdd6;
+            } /* Бірюзовий */
+
+            .item:nth-child(5) {
+                background-color: #fdb62f;
+                grid-column: 3 / 4;
+                grid-row: 2 / 4;
+            } /* Жовтий */
+
+            .item:nth-child(6) {
+                background-color: #4fa976;
+                grid-column: 1 / 3;
+            } /* Зелений */
+
+            .item:nth-child(7) {
+                background-color: #d9732f;
+                grid-column: 1 / 5;
+                grid-row: 4 / 5;
+            } /* Помаранчевий */
+        }
+
+        @media screen and (min-width:950px) and (max-width:1200px) {
+            .item:nth-child(1) {
+                background-color: #5a9bd6;
+                grid-column: 1 / 4;
+            } /* Синій */
+
+            .item:nth-child(2) {
+                background-color: #6e797f;
+                grid-column: 4 / 5;
+                grid-row: 1 / 5;
+            } /* Сірий */
+
+            .item:nth-child(4) {
+                background-color: #e65f65;
+                grid-column: 1 / 3;
+                grid-row: 3 / 4;
+            } /* Червоний */
+
+            .item:nth-child(3) {
+                background-color: #5bcdd6;
+                grid-column: 1 / 3;
+            } /* Бірюзовий */
+
+            .item:nth-child(5) {
+                background-color: #fdb62f;
+                grid-column: 3 / 4;
+                grid-row: 2 / 5;
+            } /* Жовтий */
+
+            .item:nth-child(6) {
+                background-color: #4fa976;
+                grid-column: 1 / 3;
+                grid-row: 4 / 5;
+            } /* Зелений */
+
+            .item:nth-child(7) {
+                background-color: #d9732f;
+                grid-column: 1 / 5;
+                grid-row: 5 / 6;
+            } /* Помаранчевий */
+        }
+
+        @media screen and (min-width:750px) and (max-width:950px) {
+            .item:nth-child(1) {
+                background-color: #5a9bd6;
+                grid-column: 1 / 4;
+            } /* Синій */
+
+            .item:nth-child(2) {
+                background-color: #6e797f;
+                grid-column: 4 / 5;
+                grid-row: 1 / 5;
+            } /* Сірий */
+
+            .item:nth-child(4) {
+                background-color: #e65f65;
+                grid-column: 1 / 4;
+                grid-row: 3 / 4;
+            } /* Червоний */
+
+            .item:nth-child(3) {
+                background-color: #5bcdd6;
+                grid-column: 1 / 4;
+            } /* Бірюзовий */
+
+            .item:nth-child(5) {
+                background-color: #fdb62f;
+                grid-column: 1 / 5;
+                grid-row: 5 / 6;
+            } /* Жовтий */
+
+            .item:nth-child(6) {
+                background-color: #4fa976;
+                grid-column: 1 / 4;
+                grid-row: 4 / 5;
+            } /* Зелений */
+
+            .item:nth-child(7) {
+                background-color: #d9732f;
+                grid-column: 1 / 5;
+                grid-row: 6 / 7;
+            } /* Помаранчевий */
+        }
+
+        @media screen and (max-width:750px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .item:nth-child(1) { background-color: #5a9bd6; } /* Синій */
+            .item:nth-child(2) { background-color: #6e797f; } /* Сірий */
+            .item:nth-child(3) { background-color: #5bcdd6; } /* Бірюзовий */
+            .item:nth-child(4) { background-color: #e65f65; } /* Червоний */
+            .item:nth-child(5) { background-color: #fdb62f; } /* Жовтий */
+            .item:nth-child(6) { background-color: #4fa976; } /* Зелений */
+            .item:nth-child(7) { background-color: #d9732f; } /* Помаранчевий */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>П’ять рядків, текст або рисунки в яких, біжать у вертикальному напрямку</title>
+    <meta name="description" content="Лабораторна робота з HTML: біжучий текст">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .row {
+            flex: 1;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .text {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            font-size: 24px;
+            animation: float 5s infinite;
+        }
+
+        .img1 {
+            background-color: #ffcccb; /* світло-рожевий фон */
+            animation: moveUp 3s infinite;
+        }
+
+        .img2 {
+            background-color: #add8e6; /* світло-блакитний фон */
+            animation: moveDown 4s infinite;
+        }
+
+        .img3 {
+            background-color: #90ee90; /* світло-зелений фон */
+            animation: float 6s infinite alternate;
+        }
+
+        .img4 {
+            background-color: #fffacd; /* світло-жовтий фон */
+            animation: floatDelay 8s infinite;
+        }
+
+        .img5 {
+            background-color: #d3d3d3; /* світло-сірий фон */
+            animation: floatDelay2 5s infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-100%); }
+        }
+
+        @keyframes moveUp {
+            0% { transform: translateY(100%); }
+            100% { transform: translateY(0); }
+        }
+
+        @keyframes moveDown {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(0); }
+        }
+
+        @keyframes floatDelay {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-50%); }
+            100% { transform: translateY(0); }
+        }
+
+        @keyframes floatDelay2 {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-30%); }
+        }
+    </style>
+</head>
+<body>
+    <div class="row img1">
+        <div class="text">Текст з коливаннями</div>
+    </div>
+    <div class="row img2">
+        <div class="text">Зображення знизу до гори</div>
+    </div>
+    <div class="row img3">
+        <div class="text">Зображення згори до низу</div>
+    </div>
+    <div class="row img4">
+        <div class="text">Текст з різними запізненнями</div>
+    </div>
+    <div class="row img5">
+        <div class="text">Інший текст з різними запізненнями</div>
+    </div>
+</body>
+</html>
