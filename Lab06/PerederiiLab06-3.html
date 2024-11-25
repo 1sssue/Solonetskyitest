@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя Батьківщина</title>
+    <style>
+        .image-container {
+            position: relative;
+            width: 50%;
+        }
+
+        .image-container img {
+            width: 100%;
+        }
+
+        .text {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 5px;
+            display: none;
+        }
+
+        .image-container:hover .text {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Моя Батьківщина</h1>
+    <div class="image-container">
+        <img src="https://media-cdn.tripadvisor.com/media/photo-c/1280x250/0a/9b/72/79/poltava-central-square.jpg" width="3300">
+        <div class="text">Це фото моєї Батьківщини, мiсто Полтава.</div>
+    </div>
+    <div class="image-container">
+        <img src="https://zhayvir-shostka.org.ua/wp-content/uploads/2020/10/poltava-ya-lyublyu-tebe.jpg" alt="Фото Батьківщини">
+        <div class="text">Це ще одне місце в Полтавi.</div>
+    </div>
+</body>
+</html>
