@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float Layout</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: rgb(235, 233, 255);
+        }
+
+        .menu {
+            font-size: 18px;
+            color: #003366;
+            font-family: 'Tahoma', sans-serif;
+            font-weight: bold;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .menu-item {
+            margin: 10px 5px;
+            padding: 10px 15px;
+            border: 1px solid #003366;
+            border-radius: 5px;
+            background-color: #e6f2ff;
+            display: inline-block;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            color: #003366;
+        }
+
+        .menu-item:hover {
+            background-color: #cce0ff;
+            color: #000066;
+            cursor: pointer;
+        }
+
+        .menu-link {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        #result {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu" role="navigation" aria-label="Main navigation">
+        <div class="menu-item" onclick="task1()">
+            <a class="menu-link">Task 1</a>
+        </div>
+        <div class="menu-item" onclick="task2()">
+            <a class="menu-link">Task 2</a>
+        </div>
+        <div class="menu-item" onclick="task3()">
+            <a class="menu-link">Task 3</a>
+        </div>
+        <div class="menu-item" onclick="task4()">
+            <a class="menu-link">Task 4</a>
+        </div>
+        <div class="menu-item" onclick="task5()">
+            <a class="menu-link">Task 5</a>
+        </div>
+        <div class="menu-item" onclick="task6()">
+            <a class="menu-link">Task 6</a>
+        </div>
+    </div>
+
+    <div class="main">
+        <span id="result"></span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
