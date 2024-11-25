@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab16 - task2</title>
+    <style>
+        .color-div {
+            width: 200px;
+            height: 100px;
+            background-color: green;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="color-div"></div>
+    <div class="color-div"></div>
+    <div class="color-div"></div>
+
+    <script>
+        let divElements = document.querySelectorAll(".color-div");
+
+        divElements.forEach(div => {
+            div.addEventListener('click', paintRed);
+        });
+
+        function paintRed(event) {
+            let div = event.target;
+            div.style.backgroundColor = 'red';
+            div.removeEventListener('click', paintRed);
+            div.addEventListener('click', paintGreen);
+        }
+
+        function paintGreen(event) {
+            let div = event.target;
+            div.style.backgroundColor = 'green';
+            div.removeEventListener('click', paintGreen);
+            div.addEventListener('click', paintRed);
+        }
+    </script>
+
+</body>
+</html>
