@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 16 - task1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .image-container img {
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .link-container a {
+            display: block;
+            margin-bottom: 10px;
+            color: #007BFF;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .input-container input {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .paragraph-container p {
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="section image-container">
+        <h3>Task 1</h3>
+        <img id="task1" src="https://picsum.photos/200/300" alt="Малюнок 1" width="200" height="300">
+        <img id="task1" src="https://picsum.photos/200/300" alt="Малюнок 2" width="200" height="300">
+        <img id="task1" src="https://picsum.photos/200/300" alt="Малюнок 3" width="200" height="300">
+    </div>
+
+    <div class="section link-container">
+        <h3>Task 2</h3>
+        <a id="task2" href="https://dou.ua/">DOU</a>
+        <a id="task2" href="https://stackoverflow.com/">StackOverflow</a>
+        <a id="task2" href="https://github.com/">Github</a>
+    </div>
+
+    <div class="section link-container">
+        <h3>Task 3-4</h3>
+        <a id="task3-4" href="https://dou.ua/">DOU</a>
+        <a id="task3-4" href="https://stackoverflow.com/">StackOverflow</a>
+        <a id="task3-4" href="https://github.com/">Github</a>
+    </div>
+
+    <div class="section input-container">
+        <h3>Task 5-6</h3>
+        <input id="task5-6" type="text" value="some">
+        <input id="task5-6" type="text" value="text">
+        <input id="task5-6" type="text" value="here">
+        <p id="demo"></p>
+    </div>
+
+    <div class="section paragraph-container">
+        <h3>Task 7</h3>
+        <p id="task7">4</p>
+        <p id="task7">9</p>
+        <p id="task7">16</p>
+    </div>
+
+    <div class="section input-container">
+        <h3>Task 7</h3>
+        <input id="task8" type="text" data-length="5" placeholder="Має бути 5 символів">
+        <input id="task8" type="text" data-length="3" placeholder="Має бути 3 символи">
+        <input id="task8" type="text" data-length="8" placeholder="Має бути 8 символів">
+    </div>
+
+    <script>
+        let images = document.querySelectorAll("#task1");
+        images.forEach(image => {
+            image.onclick = function() {
+                alert(this.src);
+            };
+        });
+
+        let titleLinks = document.querySelectorAll("#task2")
+        titleLinks.forEach(link => {
+            let linkTitle = (event) => {
+                event.target.title = event.target.textContent;
+                event.target.removeEventListener('mouseover', linkTitle);
+            }
+            link.addEventListener('mouseover', linkTitle);
+        });
+
+        let hrefLinks = document.querySelectorAll("#task3-4");
+        hrefLinks.forEach(link => {
+            let addHrefText = (event) => {
+                link.textContent += ` (${link.href})`;
+                link.removeEventListener("mouseover", addHrefText);
+            }
+            link.addEventListener("mouseover", addHrefText);
+        });
+
+        let inputs1 = document.querySelectorAll("#task5-6");
+        inputs1.forEach(input => {
+            input.addEventListener('blur', function (event) {
+                document.getElementById("demo").textContent = event.target.value;
+            })
+            input.addEventListener('click', function alertValue (event) {
+                alert(event.target.value);
+                event.target.removeEventListener('click', alertValue);
+            });
+        });
+
+        let paragraphs = document.querySelectorAll(".paragraph-container p");
+        paragraphs.forEach(paragraph => {
+            paragraph.addEventListener("click", function() {
+                let number = parseInt(this.textContent);
+                this.textContent = number * number;
+            });
+        });
+
+        let inputs3 = document.querySelectorAll(".input-container input[data-length]");
+        inputs3.forEach(input => {
+            input.addEventListener("blur", function() {
+                let requiredLength = parseInt(this.dataset.length);
+                if (this.value.length === requiredLength) {
+                    this.style.borderColor = "green";
+                } else {
+                    this.style.borderColor = "red";
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
