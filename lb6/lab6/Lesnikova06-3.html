@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesnikova06-3</title>
+    <style>
+        body, html
+            {
+                background-color: #e1d1c1; 
+                margin:0px;
+                padding:0px;
+            }
+        .bar
+            {
+                background-color: #392129;
+                width: 100%;
+                height: 80px;
+                padding: 0;
+                position: fixed;
+                z-index: 10;
+            }
+        .color-bar
+            {
+                background-color:#d3afaa;
+                width: auto;
+                height: 350px;
+            }
+        img
+            {
+                width: 250px;
+                height: 250px;
+                margin-top:25px ;
+                margin-left:25px ;
+                margin-right: 25px;
+                border-radius: 50%;
+            }
+        .grid-container
+            {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr); 
+                grid-template-rows: auto; 
+                grid-gap: 200px;
+                padding-top: 150px;
+                padding-left: 50px;
+                width: 50%; 
+                height: 700px;
+            }
+            .img1 img
+            {
+                width: 1200px;
+                height: 900px;
+                opacity: 0.3;
+                position: absolute; /* Абсолютне позиціонування для переміщення зображення */
+                top: 0%;
+                margin-left: 19%;
+                z-index: 1;
+            }
+        .grid-item
+            {
+                background-color:#86534e;
+                z-index: 2;
+            }
+        h1
+            {
+                color:#c9c2b2;
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 48px;
+                text-align: center;
+                margin-top: 10px
+            }
+        p   
+            {
+                margin-left: 10px;
+                margin-top: 5px;
+                text-align: center;
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 28px;
+                color: #c9c2b2;
+            }
+    </style>
+</head>
+<body>
+    <div class="bar">
+        <h1>Моя батьківщина</h1>
+    </div>
+        <div class="color-bar">
+            <div class="grid-container">
+                <div class="grid-item">
+                    <img src="1.1.png" title="Карпати">
+                    <p><b><ins>Карпати</b></ins> - це не лише чудові краєвиди, а 
+                        й джерело натхнення для багатьох. Тут можна 
+                        відчути чисте повітря, насолодитися звуками природи 
+                        та побачити справжню красу України. Це місце, де гірські 
+                        вершини торкаються неба, а стрімкі річки та водоспади наповнюють 
+                        енергією.
+                    </p>
+                </div>
+                <div class="grid-item">
+                    <img src="2.2.png" title="Софіївський собор">
+                    <p><b><ins>Київ</b></ins> - серце України, місто з тисячолітньою історією. 
+                        Софійський собор є одним із символів столиці та всієї країни. Він вражає 
+                        своєю величчю та архітектурою, а також зберігає спокій і мудрість століть. 
+                        Це місце об'єднує духовність і культуру.
+                    </p>
+                </div>
+                <div class="grid-item">
+                    <img src="3.3.png" title="Узбережжя одеси">
+                    <p><b><ins>Узбережжя Одеси</b></ins> - це море, сонце, тепло та свобода. 
+                        Коли хвилі тихо набігають на берег, а сонячні промені зігрівають пісок, 
+                        відчуваєш спокій і гармонію. Тут життя сповнене яскравими враженнями, 
+                        святами й затишними вечорами біля моря.
+                    </p>
+                </div>
+                <div class="grid-item">
+                    <img src="4.4.png" title="Подільські Товтри">
+                    <p><b><ins>Подільські Товтри</b></ins> - це унікальна природна зона, де можна знайти 
+                        справжню гармонію природи. Величні ландшафти, чисті озера та багата рослинність 
+                        роблять це місце особливим. Тут відчувається зв'язок із природою та історією, 
+                        адже ці землі зберігають численні легенди й таємниці.
+                    </p>
+                </div>
+            </div>
+            <div class="img1">
+                <img src="map.png" alt="Карта">
+            </div>
+        </div>
+</body>
+</html>

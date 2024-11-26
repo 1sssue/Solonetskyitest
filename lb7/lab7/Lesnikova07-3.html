@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesnikova07-3</title>
+    <style>
+        body
+        {
+            background-color: black;
+        }
+        .flex-container 
+        {
+            display: flex;
+            flex-direction: column; 
+            flex-wrap: wrap;
+            width: 700px;
+            height: 700px;
+            background-color: rgb(120, 120, 245);
+            border: 2px solid white;
+            margin-top: 50px;
+            margin-left: 603px;
+            z-index: 2;
+        }
+        .flex-item1 
+        {
+            background-color: rgb(120, 120, 245);
+            width: 685px;
+            height: 90px;
+            border: 2px solid white;
+            margin-top: 5px; 
+            margin-left: 5px; 
+            position: relative; 
+        }
+        .flex-item2
+        {
+            background-color: rgb(120, 120, 245);
+            width: 30px;
+            height: 40px;
+            border: 2px solid white;
+            margin-top: 5px; 
+            margin-left: 5px; 
+            position: relative; 
+        }
+        .flex-item3
+        {
+            background-color: rgb(120, 120, 245);
+            width: 30px;
+            height: 145px;
+            border: 2px solid white;
+            margin-top: 5px; 
+            margin-left: 5px; 
+            position: relative; 
+        }
+        .flex-item4
+        {
+            background-color: rgb(120, 120, 245);
+            width: 250px;
+            height: 40px;
+            border: 2px solid white;
+            margin-top: 5px; 
+            position: relative; 
+            z-index: 1;
+        }
+        .flex-item5
+        {
+            background-color: rgb(120, 120, 245);
+            width: 250px;
+            height: 145px;
+            border: 2px solid white;
+            margin-top: 5px; 
+            position: relative; 
+            z-index: 1;
+        }
+        .flex-item6
+        {
+            background-color: rgb(120, 120, 245);
+            width: 387px;
+            height: 40px;
+            border: 2px solid white;
+            margin-top: 5px; 
+            position: relative; 
+            z-index: 1;
+        }
+        .flex-item7
+        {
+            background-color: rgb(120, 120, 245);
+            width: 387px;
+            height: 145px;
+            border: 2px solid white;
+            margin-top: 5px; 
+            position: relative; 
+            z-index: 1;
+        }
+        .row
+        {
+            display: flex;
+            gap: 5px;
+        }
+        p
+        {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 28px;
+            text-align: center;
+            color: white;
+        }
+        .text
+        {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 18px;
+            text-align: center;
+            margin-top: 10px;
+            color: white;
+        }
+        .text1
+        {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 18px;
+            margin-top: 10px;
+            color: white;
+            margin-left: 5px;
+        }
+        .text2
+        {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 14px;
+            margin-top: 10px;
+            color: white;
+            margin-left: 5px;
+        }
+        input
+        {
+            margin-top: 8px;
+            margin-left: 7px;
+        }
+        </style>
+</head>
+<body>
+    <form action="server.html">
+    <div class="flex-container">
+        <div class="flex-item1">
+            <p><b>АНКЕТА</b></p>
+        </div>
+        <div class="row">
+            <div class="flex-item2">
+                <div class="text"><b>1.</b></div>
+            </div>
+            <div class="flex-item4">
+                <div class="text1"><b>Прізвище</b></div>
+            </div>
+            <div class="flex-item6">
+                <input type="text" size="48" placeholder="Прізвище">
+            </div>
+        </div>
+        <div class="row">
+            <div class="flex-item2">
+                <div class="text"><b>2.</b></div>
+            </div>
+            <div class="flex-item4">
+                <div class="text1"><b>Ім'я, по-батькові</b></div>
+            </div>
+            <div class="flex-item6">
+                <input type="text" size="48" placeholder="Ім'я">
+            </div>
+        </div>
+        <div class="row">
+            <div class="flex-item2">
+                <div class="text"><b>3.</b></div>
+            </div>
+            <div class="flex-item4">
+                <div class="text1"><b>Число і рік нароження</b></div>
+            </div>
+            <div class="flex-item6">
+                <input type="date">
+            </div>
+        </div>
+        <div class="row">
+            <div class="flex-item2">
+                <div class="text"><b>4.</b></div>
+            </div>
+            <div class="flex-item4">
+                <div class="text1"><b>Домашня адрееса</b></div>
+            </div>
+            <div class="flex-item6">
+                <input type="text" size="48" placeholder="Адреса">
+            </div>
+        </div>
+        <div class="row">
+            <div class="flex-item2">
+                <div class="text"><b>5.</b></div>
+            </div>
+            <div class="flex-item4">
+                <div class="text1"><b>Місце навчання (роботи)</b></div>
+            </div>
+            <div class="flex-item6">
+                <input type="text" size="48" placeholder="Місце навчання">
+            </div>
+        </div>
+        <div class="row">
+            <div class="flex-item2">
+                <div class="text"><b>6.</b></div>
+            </div>
+            <div class="flex-item4">
+                <div class="text1"><b>Домашній (робочий) телефон</b></div>
+            </div>
+            <div class="flex-item6">
+                <input type="text" size="48" placeholder="Телефон">
+            </div>
+        </div>
+        <div class="row">
+            <div class="flex-item2">
+                <div class="text"><b>7.</b></div>
+            </div>
+            <div class="flex-item4">
+                <div class="text1"><b>E-mail</b></div>
+            </div>
+            <div class="flex-item6">
+                <input type="text" size="48" placeholder="e-mail">
+            </div>
+        </div>
+        <div class="row">
+            <div class="flex-item3">
+                <div class="text"><b>8.</b></div>
+            </div>
+            <div class="flex-item5">
+                <div class="text1"><b>Область наукових інтересів</b></div>
+            </div>
+            <div class="flex-item7">
+                <input type="text" size="48" placeholder="1">
+                <input type="text" size="48" placeholder="2">
+                <input type="text" size="48" placeholder="3">
+                <input type="text" size="48" placeholder="4">                
+            </div>
+        </div>
+        <div class="flex-item1">
+            <input type="reset"  value="Відмінити введення">
+            <input type="button" value="Надіслати дані та перейти до 2го етапу реєстрації" onclick="window.location.href='server.html';">
+        </div>
+    </div>
+</form>
+</body>
+</html>

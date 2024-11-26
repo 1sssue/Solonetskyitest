@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesnikova07-1</title>
+    <style>
+        pre
+        {
+            font-size: 18px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body>
+    <h2>
+        Навчаємось створювати форми в html
+    </h2>
+    <form action="server.html" method="get" target="_blank">
+        <pre>
+            Ваше ім'я:  <input type="text" name="name" maxlength="40" size="40" placeholder="your name">
+            Ваша стать: <input type="radio" name="pol" id="male" value="male">Чоловіча <input type="radio" name="pol" id="female" value="female">Жіноча
+            На якому курсі ви навчаєтесь?   <select name="curs" size="1">
+                <option value="0">Не навчаюсь</option>
+                <option value="1">Перший</option>
+                <option value="2">Другий</option>
+                <option value="3">Третій</option>
+                <option value="4">Четвертий</option>
+                <option value="5">П'ятий</option>
+            </select>  
+            Які дисципліни ви вичаєтете на курсі? <input type="checkbox" name="web" value="yes" checked> WEB-programming <input type="checkbox" value="no" name="eldinam">Технічна електродинаміка     
+            Напишіть декілька слів про себе:
+            <textarea name="about" cols="60" rows="6" wrap="off"></textarea>
+                <input type="submit" value="Відіслати"> <input type="reset" value="Очистити"> <input type="file" name="friend" size="50" accept=".jpg,.png,.pdf">           
+        </pre>
+    </form>
+</body>
+</html>
