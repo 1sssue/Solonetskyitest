@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рядок, що біжить</title>
+    <style>
+        body {
+            background-color: #f0f8ff; /* Фон сторінки */
+            margin: 0;
+            padding: 0;
+        }
+        .marquee-container {
+            background-color: #4caf50; 
+            height: 50px; 
+            width: 80%; 
+            color: #ffffff; 
+            font-family: Arial, sans-serif; 
+            font-size: 24px; 
+            line-height: 50px; 
+            overflow: hidden;
+            position: relative;
+            margin: 20px auto;
+        }
+        .marquee-text {
+            position: absolute;
+            white-space: nowrap;
+            animation: marquee 10s linear infinite;
+        }
+        @keyframes marquee {
+            0% { left: 100%; }
+            100% { left: -100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="marquee-container">
+        <div class="marquee-text">Це приклад рядка, що біжить, на веб-сторінці.</div>
+    </div>
+</body>
+</html>
