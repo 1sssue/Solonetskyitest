@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Завдання</title>
     <style>
-        /* Клас для зображень - 1.1 */
+        /* Клас зображень - 1.1 */
         .picture {
             width: 200px;
             height: 300px;
             margin: 10px;
         }
-        /* Клас для полів вводу - 1.5 */
+        /* Клас для вводу - 1.5 */
         .inputField {
             display: block;
             margin: 10px 0;
         }
-        /* Клас для кольорових блоків - 2.1 */
+        /* Клас для цвітних блоків - 2.1 */
         .coloredDiv {
             width: 100px;
             height: 100px;
@@ -29,7 +29,7 @@
 
 <h2>Завдання</h2> <!-- Заголовок -->
 
-<!-- Завдання 1.1 - зображення 200*300 пікселів -->
+<!-- Завдання 1.1 - зображення 200*300 рх -->
 <img src="image/img1.jpg" class="picture" alt="Image 1">
 <img src="image/img2.jpg" class="picture" alt="Image 2">
 <img src="image/img3.jpg" class="picture" alt="Image 3">
@@ -39,7 +39,7 @@
 <a href="#" class="link" title="Link 2">Link 2</a>
 <a href="#" class="link" title="Link 3">Link 3</a>
 
-<!-- Завдання 1.5 - поля вводу для події блюр/деом -->
+<!-- Завдання 1.5 - поля вводу для дії блюр/деом -->
 <input type="text" class="inputField" placeholder="Input 1">
 <input type="text" class="inputField" placeholder="Input 2">
 <input type="text" class="inputField" placeholder="Input 3">
@@ -53,7 +53,7 @@
 <script>
     // Завдання 1.1 - виводить атрибут src зображення при кліку
     document.querySelectorAll('.picture').forEach(img => {
-        img.onclick = () => alert(img.src); // Показує шлях до зображення
+        img.onclick = () => alert(img.src); // показ шлях до зображ
     });
 
     // Завдання 1.2 - зберігає текст посилання в атрибут title при наведенні
@@ -63,7 +63,7 @@
         });
     });
 
-    // Завдання 1.3 і 1.4 - додає href до тексту посилання і відключає подію
+    // Завдання 1.3 і 1.4 - додає href до тексту посилання і відключає дію (начало)
     document.querySelectorAll('.link').forEach(link => {
         const addHref = () => {
             link.textContent += ` (${link.href})`; // Додає href до тексту посилання
