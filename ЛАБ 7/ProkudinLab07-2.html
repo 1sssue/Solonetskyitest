@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма з усіма елементами</title>
+</head>
+<body>
+    <h2>Приклад форми з усіма елементами</h2>
+    <form action="#" method="post">
+        Ваше ім'я: <input type="text" name="name" maxlength="40" size="40"><br><br>
+
+        Ваша стать:
+        <input type="radio" name="gender" value="male"> Чоловіча
+        <input type="radio" name="gender" value="female"> Жіноча<br><br>
+
+        Які дисципліни ви вивчаєте?
+        <br>
+        <input type="checkbox" name="subject1" value="web"> WEB-програмування<br>
+        <input type="checkbox" name="subject2" value="eldinam"> Технічна електродинаміка<br><br>
+
+        Напишіть декілька слів про себе:<br>
+        <textarea name="about" rows="4" cols="50"></textarea><br><br>
+
+        Оберіть день тижня:
+        <select name="day">
+            <option value="monday">Понеділок</option>
+            <option value="tuesday">Вівторок</option>
+            <option value="wednesday">Середа</option>
+            <option value="thursday">Четвер</option>
+            <option value="friday">П’ятниця</option>
+        </select><br><br>
+
+        <input type="submit" value="Надіслати">
+        <input type="reset" value="Очистити">
+    </form>
+</body>
+</html>
