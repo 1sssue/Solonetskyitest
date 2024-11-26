@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+body::before{
+    background: url('../img/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.4;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+h1 {
+    color: #4caf90;
+    text-align: center;
+    font-weight: bold;
+    font-style: normal;
+}
+
+nav {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+nav a:visited {
+    color: #666;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav a:active {
+    color: #ff5722;
+}
+
+main p {
+    margin: 20px auto;
+    padding: 10px;
+    max-width: 600px; 
+    text-align: justify;
+    line-height: 1.6;
+    text-indent: 2em;
+    font-style: italic;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+
+main {
+    padding: 0 20px;
+}
+
+main img {
+    display: block;
+    margin: 10px auto;
+    max-width: 100%;
+    height: auto;
+    border: 5px solid #4caf90;
+    border-radius: 60px;
+}

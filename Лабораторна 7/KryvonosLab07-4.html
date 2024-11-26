@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Замовлення товару</title>
+</head>
+<body background="img/abst.jpg" text="#FFFFFF"> 
+<font face="Bahnschrift">
+    
+    <form action="#" method="post">
+        <table border="1" cellpadding="10" align="center" background="img/Rectangle 6.jpg">
+            <tr><th colspan="2"><h2 align="center">Форма замовлення товару</h2></th></tr>
+            <tr>
+                <td>Номер банківського рахунку:</td>
+                <td><input type="text" name="account_number" size="40" required ></td>
+            </tr>
+            <tr>
+                <td>Особистий номер користувача:</td>
+                <td><input type="text" name="user_id" size="40" required></td>
+            </tr>
+            <tr>
+                <td>Список товарів:</td>
+                <td>
+                    <select name="products" multiple required>
+                        <option value="product1">Ручка</option>
+                        <option value="product2">Олівець</option>
+                        <option value="product3">Зошит</option>
+                        <option value="product4">Щоденник</option>
+                        <option value="product5">Пенал</option>
+                        <option value="product6">Лінійка</option>
+                        <option value="product7">Обкладинка</option>
+                        <option value="product8">Гумка</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Коментарі:</td>
+                <td><textarea name="comments" rows="4" cols="40"></textarea></td>
+            </tr>
+            <tr>
+                <td>Вид оплати:</td>
+                <td>
+                    <input type="radio" name="payment_method" value="cash" required> Готівковий
+                    <input type="radio" name="payment_method" value="non_cash"> Безготівковий
+                </td>
+            </tr>
+            <tr>
+                <td>Додаткова інформація:</td>
+                <td>
+                    <input type="checkbox" name="balance_info" value="yes"> Дані про залишки на рахунку<br>
+                    <input type="checkbox" name="payments_info" value="yes"> Список останніх виплат по рахунку
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="reset" value="Очистити форму">
+                    <input type="submit" value="Надіслати замовлення">
+                </td>
+            </tr>
+        </table>
+    </form> 
+</font>
+   
+</body>
+</html>
