@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сенсорна Карта Природи</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            margin: 20px;
+        }
+        img {
+            border: 2px solid #8fbc8f;
+            border-radius: 10px;
+        }
+        .info {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Сенсорна Карта Пейзажу</h1>
+    <img src="nature.jpg" alt="Природний пейзаж" width="800" height="500" usemap="#nature-map">
+    <map name="nature-map">
+        <!-- Виділення гір -->
+        <area shape="rect" coords="100,50,400,200" href="#" alt="Гори" title="Мальовничі гори">
+        <!-- Виділення лісу -->
+        <area shape="rect" coords="450,200,700,400" href="#" alt="Ліс" title="Щільний зелений ліс">
+        <!-- Виділення неба -->
+        <area shape="poly" coords="0,0,800,0,800,100,0,100" href="#" alt="Небо" title="Яскраве блакитне небо">
+    </map>
+    <div class="info">
+    </div>
+</body>
+</html>
