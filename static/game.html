@@ -164,7 +164,7 @@
                     }
                 }, 1000);
 
-                $('.cell').click(() => {
+                $('.cell').click(function () {
                     const number = $(this).data('number');
                     if (number === currentNumber) {
                         $(this).addClass('taken');
