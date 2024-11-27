@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя перша гра</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            border: 4px solid black;
+            padding: 15px 50px 15px 50px;
+        }
+
+        #welcome-text {
+            font-size: 50px;
+            font-weight: lighter;
+            color: lightcoral
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            background-color: rgb(2, 127, 165);
+            border-radius: 5px;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+            margin: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="welcome-text">Моя перша гра</h1>
+        <div class="button-container">
+            <button id="play-button">Почати гру</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(() => {
+            $('#play-button').click(() => {
+                window.location.href = '/game';
+            });
+        });
+    </script>
+</body>
+
+</html>
