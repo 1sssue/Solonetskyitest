@@ -1,0 +1,175 @@
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* head */
+        .header { 
+            background-color:rgba(65, 165, 246); 
+            padding: 0px 20px;
+            height: 11%;
+            border-bottom: 3px solid rgb(245, 148, 3); 
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container{
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: 3px;
+            padding: 17px 5px;
+        }
+
+        a {
+            font-size: 18px;
+            text-decoration: none;
+            color: black;
+            margin-left: 5px ;
+            text-align: right; 
+        }
+
+        h1 {
+            color: black;
+            font-weight: bold;
+            display: inline;
+            text-align: left;
+            margin-right: 65%;
+        }
+
+        h2{
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* main */
+        .form-container {
+            margin: 10px 600px;
+            width: 300px;
+            background-color: #fff;
+            border: 1px solid #7b7b7b;
+            border-radius: 5px;     
+        }
+
+        .form-header {
+            background-color: #41a5f6;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .form-body {
+            padding: 5px;
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        /* bottom */
+        .bottom{
+            background-color: #2b2a2a;
+            height: 7.5%;
+            
+        }
+
+        .security{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 15px;
+            margin-top: 15px;
+            color: white;
+            margin-left: 43%;
+            margin-top: 5px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">                     
+            <h1>Мій особистий кабінет</h1>
+            <a href=""> Вхід </a>
+            <a href="/SobolevLab10.html" target="_blank"> Реєстрація </a>         
+        </div>
+    </header>
+
+    <div class="form-container">
+        <div class="form-header">
+                <h2> Реєстрація користувача </h2>             
+        </div>
+        <form action="">
+            <div class="form-body">
+                <div class="form-group">
+                    <label for="group"> Прізвище </label>
+                    <input type="text" name="form">
+                </div>
+            </div>
+            <div class="form-body">
+                <div class="form-group">
+                    <label for="group"> Ім'я </label>
+                    <input type="text" name="form">
+                </div>
+            </div>
+            <div class="form-body">
+                <div class="form-group">
+                    <label for="group"> Логін </label>
+                    <input type="text" name="form">
+                </div>
+            </div>
+            <div class="form-body">
+                <div class="form-group">
+                    <label for="group"> Навчальна група </label>
+                    <select name="form" >
+                        <option value="281" selected> 281 </option>
+                        <option value="281" > 282 </option>
+                        <option value="281" > 283 </option>
+                        <option value="281" > 284 </option>
+                        <option value="281" > 285 </option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-body">
+                <div class="form-group">
+                    <label for="group"> Пароль </label>
+                    <input type="text" name="form" minlength="8">
+                </div>
+            </div>
+            <div class="form-body">
+                <div class="form-group">
+                    <label for="group"> Підтвердження паролю </label>
+                    <input type="text" name="form" minlength="8">
+                </div>
+            </div>
+            <input type="submit" align="right" value="Зареєструватись">
+        </form>
+    </div>
+
+    <div class="bottom">
+        <div class="security">
+            <p> © 2024 Всі права захищені.</p>
+        </div>
+    </div>
+
+</body>

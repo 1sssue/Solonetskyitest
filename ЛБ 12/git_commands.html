@@ -1,0 +1,272 @@
+<head>
+    <title>Команди Git</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* head */
+        .header { 
+            background-color:rgba(65, 165, 246); 
+            padding: 0px 20px;
+            height: 7%;
+            border-bottom: 3px solid rgb(245, 148, 3); 
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container{
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: 3px;
+            padding: 13px 3px;
+        }
+
+        a {
+            font-size: 18px;
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            margin-left: 5px ;
+            text-align: right; 
+        }
+
+        h1 {
+            color: black;
+            font-weight: bold;
+            display: inline;
+            text-align: left;
+            margin-right: 65%;
+        }
+
+        /* main */
+
+        .code{
+            font-weight: bold;
+            padding-top: 0px;
+        } 
+
+        .content {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            padding: 20px;
+            max-height: 100%;
+            margin-bottom: 66px;
+        }
+
+        .section {
+            width: 30%;
+            margin-bottom: 20px;
+        }
+
+        .section h2 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .section p {
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .section.create h2 {
+            color: #008cba;
+        }
+
+
+        .section.branches h2 {
+            color: #28a745;
+        }
+
+        .section.change h2 {
+            color: #2a5a06;
+        }
+
+        .section.synchronize a {
+            color: #01739a;
+            font-size: 14px;
+
+        }
+
+        .section.synchronize h2 {
+            color: #d9534f;
+        }
+
+        /* bottom */
+        .bottom {
+            background-color: #2b2a2a;
+            height: 10%;
+            /* margin-top: 19%; */
+        }
+
+        .security{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 15px;
+            margin-top: 15px;
+            color: white;
+            margin-left: 43%;
+            margin-top: 5px; 
+        }
+
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">                     
+            <h1>Мій особистий блог</h1>
+            <a href=""> Вхід </a>
+            <a href="#"> Реєстрація </a>       
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="section create">
+            <h2>Create a Repository</h2>
+            <p>From scratch -- Create a new local repository:</p>
+            <div class="code">
+                $ git init [project name]
+            </div>
+            <p>Download from an existing repository</p>
+            <div class="code">
+                $ git clone my_url
+            </div>
+
+            <h2>Observe your Repository</h2>
+            <p>List new or modified files not yet committed:</p>
+            <div class="code">
+                $ git status
+            </div>
+            <p>Show the changes to files not yet staged</p>
+            <div class="code">
+                $ git diff
+            </div>
+            <p>Show the changes to staged files</p>
+            <div class="code">
+                $ git diff --cached
+            </div>
+            <p>Show all staged and unstaged file changes</p>
+            <div class="code">
+                $ git diff HEAD
+            </div>
+            <p>Show the changes between two commit IDs</p>
+            <div class="code">
+                $ git diff commit1 commit2
+            </div>
+            <p>List the change dates and authors for a file</p>
+            <div class="code">
+                $ git blame [file]
+            </div>
+            <p>Show the file changes for a commit ID and/or file</p>
+            <div class="code">
+                $ git show [commit]:[file]
+            </div>
+            <p>Show full change history</p>
+            <div class="code">
+                $ git log
+            </div>
+            <p>Show change history for a file/directory including diffs</p>
+            <div class="code">
+                $ git log -p [file/directory]
+            </div>
+        </div>     
+        
+        <div class="section branches">
+            <h2>Working with Branches</h2>
+            <p>List all local branches</p>
+            <div class="code">
+                $ git branch
+            </div>
+            <p>List all branches, local and remote</p>
+            <div class="code">
+                $ git branch -av
+            </div>
+            <p>Switch to a branch, my_branch, and update working directory</p>
+            <div class="code">
+                $ git checkout my_branch
+            </div>
+            <p>Create a new branch called new_branch</p>
+            <div class="code">
+                $ git branch new_branch
+            </div>
+            <p>Delete the branch called my_branch</p>
+            <div class="code">
+                $ git branch -d my_branch
+            </div>
+            <p>Merge branch_a into branch_b</p>
+            <div class="code">
+                $ git checkout branch_b
+            </div>
+            <div class="code">
+                $ git merge branch_a
+            </div>
+            <p>Tag the current commit</p>
+            <div class="code">
+                $ git tag my_tag
+            </div>
+        </div>
+        
+        <div class="section change">
+            <h2>Make a Change</h2>
+            <p>Stages the file, ready for commit:</p>
+            <div class="code">
+                $ git add [file]
+            </div>
+            <p>Stage all changed files, ready for commit</p>
+            <div class="code">
+                $ git add .
+            </div>
+            <p>Commit all staged files to versioned history</p>
+            <div class="code">
+                $ git commit -m "commit message"
+            </div>
+            <p>Commit all your tracked files to versioned history</p>
+            <div class="code">
+                $ git commit -am "commit message"
+            </div>
+            <p>Unstage files, keeping the file changes</p>
+            <div class="code">
+                $ git reset [file]
+            </div>
+            <p>Revert everything to the last commit</p>
+            <div class="code">
+                $ git reset --hard
+            </div>
+        </div>
+        
+        <div class="section synchronize">
+            <h2>Synchronize</h2>
+            <p>Get the latest changes from origin (no merge)</p>
+            <div class="code">
+                $ git fetch
+            </div>
+            <p>Fetch the latest changes from origin and merge</p>
+            <div class="code">
+                $ git pull
+            </div>
+            <p>Fetch the latest changes from origin and rebase</p>
+            <div class="code">
+                $ git pull --rebase
+            </div>
+            <p>Push local changes to the origin</p>
+            <div class="code">
+                $ git push
+            </div>
+
+            <h2>Finally!</h2>
+            <p>When in doubt, use git help:</p>
+            <div class="code">
+                $ git command --help
+            </div>
+            <p>Or visit <a href="https://training.github.com">https://training.github.com</a> for official GitHub training.</p>
+        </div>
+    </div>
+   
+    <div class="bottom">
+        <div class="security">
+            <p> © 2024 Всі права захищені.</p>
+        </div>
+    </div>
+</body>

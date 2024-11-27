@@ -1,0 +1,47 @@
+body {
+    background-image: url('/image/green-emerald-blue-gradation-wallpaper-7000d589ef76ee0348cfa746dba6d478.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    font-size: 20px; 
+    line-height: 1.6;
+    margin: none;
+    padding: none;
+    color: rgb(0, 0, 0);
+}
+
+p {
+    text-align: justify; 
+    text-indent: 25px; 
+    margin: 5px 5px; 
+    font-style: italic; 
+}
+
+h1 {
+    text-align: center; 
+    font-weight: bold; 
+    color: #1404c7; 
+    font-style: normal; 
+    margin: 5px 5px;  
+}
+
+a {
+    text-decoration: none; 
+}
+a:link {
+    color: rgb(223, 252, 35); 
+}
+a:visited {
+    color: rgb(134, 250, 206); 
+}
+a:hover {
+    color: rgb(255, 235, 108); 
+    text-decoration: underline;
+}
+
+img {
+    display: block;
+    margin: 25px 12%; 
+    max-width: 90%; 
+    height: auto;
+}
