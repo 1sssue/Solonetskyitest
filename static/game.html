@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя друга гра</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .game-container {
+            display: flex;
+            text-align: center;
+            border: 4px solid black;
+            padding: 50px 0px 50px 50px;
+        }
+
+        .board {
+            display: grid;
+            grid-template-columns: repeat(5, 100px);
+            grid-template-rows: repeat(5, 100px);
+            border: 1px solid black;
+            gap: 4px;
+            padding: 4px;
+        }
+
+        #side-bar {
+            display: flex;
+            padding: 25px;
+            margin: 25px;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+
+        }
+
+        .cell {
+            display: flex;
+            align-items: center;
+            border: 1px solid black;
+            pointer-events: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cell.taken {
+            border-color: red;
+            pointer-events: none;
+        }
+
+        #current-img {
+            display: flex;
+            align-self: center;
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+            position: relative;
+            cursor: grab;
+        }
+
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            background-color: rgb(2, 127, 165);
+            border-radius: 5px;
+            color: white;
+            font-size: 1em;
+            margin: 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="button-container">
+        <button class="pack-choice-button" pack-type="0">Тварини</button>
+        <button class="pack-choice-button" pack-type="1">Комахи</button>
+        <button class="pack-choice-button" pack-type="2">Риби</button>
+    </div>
+    <div class="game-container">
+        <div class="board" id="board"></div>
+        <div class="side-bar" id="side-bar">
+            <div id="current-img">
+            </div>
+            <div class="button-container">
+                <button id="restart-button">Почати cпочатку</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="dialog" title="Перемога">
+        <p>Вітаю, всі картинки підібрані вірно!</p>
+    </div>
+
+    <script>
+        let randomIntFromRange = (min, max) => {
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+        let generateUniqueRandomNumbers = (count, min, max) => {
+            const numbers = new Set();
+            while (numbers.size < count) {
+                const randomNum = randomIntFromRange(min, max)
+                numbers.add(randomNum);
+            }
+            return Array.from(numbers);
+        };
+
+        function* yieldRandomElement(array) {
+            let arr = [...array];
+            while (arr.length > 0) {
+                const randomIndex = Math.floor(Math.random() * arr.length);
+                yield arr.splice(randomIndex, 1)[0];
+            }
+        }
+
+        const imgPacks = ["animals", "insects", "fishs"]
+        let currentImgPackIdx = 0
+
+        $(document).ready(() => {
+            let initializeGame = (pack_num) => {
+                currentImgPackIdx = pack_num
+                let currentImgPack = imgPacks[pack_num]
+
+                let setCurrentImage = (number) => {
+                    $("#current-img").empty()
+                    $('#current-img').attr('number', number)
+                    $('#current-img').append(`<img src="/images/${currentImgPack}/${number}.jpg"></img>`)
+                    $("#current-img").draggable({
+                        revert: "invalid",
+                        start: function (event, ui) {
+                            $(this).css('opacity', '0.7');
+                        },
+                        stop: function (event, ui) {
+                            $(this).css('opacity', '1');
+                        }
+                    });
+                }
+
+                $('#board').empty();
+                $('#current-img').css('visibility', 'visible')
+
+                let numbers = generateUniqueRandomNumbers(25, 1, 50)
+                    .sort(() => Math.random() - 0.5);
+
+                numbers.forEach((number) => {
+                    $('#board').append(`<div class="cell" number='${number}'><img src="/images/${currentImgPack}/${number}.jpg"></img></div>`);
+                });
+
+                const numbersGen = yieldRandomElement(numbers);
+                setCurrentImage(numbersGen.next().value)
+
+                $(".cell").droppable({
+                    drop: function (event, ui) {
+                        var draggedItem = ui.draggable;
+                        var targetItem = $(this);
+
+                        if (draggedItem.attr("number") === targetItem.attr("number")) {
+                            draggedItem.position({
+                                of: targetItem,
+                                my: "center",
+                                at: "center"
+                            });
+
+                            draggedItem.animate({
+                                top: "0px",
+                                left: "0px"
+                            }, 0);
+                            targetItem.droppable("disable");
+                            targetItem.addClass("taken");
+                            let nextNumber = numbersGen.next().value
+                            if (nextNumber === undefined) {
+                                $('#current-img').css('visibility', 'hidden')
+                                $("#dialog").dialog("open");
+                                initializeGame(currentImgPackIdx);
+                            } else {
+                                setCurrentImage(nextNumber)
+                            }
+                        } else {
+                            draggedItem.animate({
+                                top: "0px",
+                                left: "0px"
+                            }, 500);
+                        }
+                    }
+                });
+            }
+
+            $("#dialog").dialog({
+                autoOpen: false
+            });
+            $('#restart-button').click(() => {
+                initializeGame(currentImgPackIdx);
+            });
+
+            $('.pack-choice-button').click(function () {
+                const packType = $(this).attr("pack-type");
+                initializeGame(packType);
+            });
+
+            initializeGame(currentImgPackIdx);
+        });
+    </script>
+</body>
+
+</html>
