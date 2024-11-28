@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя перша гра</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .game-container {
+            text-align: center;
+            border: 4px solid black;
+            padding: 15px 50px 15px 50px;
+        }
+
+        #timer,
+        #information {
+            font-size: x-large;
+            font-weight: lighter;
+        }
+
+        .board {
+            display: grid;
+            grid-template-columns: repeat(5, 60px);
+            grid-template-rows: repeat(5, 60px);
+            border: 1px solid black;
+            gap: 4px;
+            padding: 4px;
+        }
+
+        .cell {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+
+        .cell.taken {
+            background-color: #d3d3d3;
+            pointer-events: none;
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            background-color: rgb(2, 127, 165);
+            border-radius: 5px;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        .history-table {
+            margin: 20px;
+            border-collapse: collapse;
+            text-align: left;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .history-table th,
+        .history-table td {
+            border: 1px solid white;
+            padding: 8px;
+            width: 150px;
+        }
+
+        .history-table th {
+            background-color: rgb(2, 127, 165);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 id="information"></h2>
+    <div class="game-container">
+        <h1 id="timer">Тисни старт!</h1>
+        <div class="board" id="board"></div>
+        <div class="button-container">
+            <button id="restart-button">Старт</button>
+        </div>
+    </div>
+    <table class="history-table" id="history">
+        <thead>
+            <tr>
+                <th>Назва гри</th>
+                <th>Час</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(() => {
+            const fonts = [
+                'Arial', 'Verdana', 'Helvetica', 'Times New Roman', 'Trebuchet MS',
+                'Georgia', 'Garamond', 'Courier New', 'Brush Script MT', 'Palatino Linotype'
+            ];
+            const colors = [
+                '#FF5733', '#33FF57', '#3357FF', '#F1C40F', '#8E44AD',
+                '#E74C3C', '#1ABC9C', '#2ECC71', '#3498DB', '#9B59B6'
+            ];
+            let numbers = [...Array(25).keys().map(i => i + 1)]
+            let history = []
+            numbers.forEach((number) => {
+                $('#board').append('<div class="cell"></div>');
+            });
+
+            let currentNumber, timeLeft, timerInterval;
+            let currentGame = 1;
+
+            let initializeGame = () => {
+                currentNumber = 1;
+                timeLeft = 60;
+
+                clearInterval(timerInterval);
+                $('#timer').text('Залишилось: 60');
+                $('#information').text('');
+                $('#board').empty();
+                $('#restart-button').text('Почати спочатку')
+
+                numbers = numbers.sort(() => Math.random() - 0.5);
+
+                numbers.forEach((number) => {
+                    $('#board').append('<div class="cell" data-number="' + number + '">' + number + '</div>');
+                    // $(`#board div.cell[data-number='${number}']`).css('font-family', fonts[randomIntFromRange(0, fonts.length)])
+                    // $(`#board div.cell[data-number='${number}']`).css('font-size', `${randomIntFromRange(12, 40)}px` )
+                    // $(`#board div.cell[data-number='${number}']`).css('font-weight', randomIntFromRange(1, 9) * 100)
+                    // $(`#board div.cell[data-number='${number}']`).css('color', colors[randomIntFromRange(0, colors.length)])
+                    let properties = {
+                        'font-family': fonts[randomIntFromRange(0, fonts.length)],
+                        'font-size': `${randomIntFromRange(12, 40)}px`,
+                        'font-weight': randomIntFromRange(1, 9) * 100,
+                        'color': colors[randomIntFromRange(0, colors.length)]
+                    }
+                    $(`#board div.cell[data-number='${number}']`).css(properties)
+                });
+
+                timerInterval = setInterval(() => {
+                    timeLeft--;
+                    $('#timer').text('Залишилось: ' + timeLeft);
+                    if (timeLeft <= 0) {
+                        clearInterval(timerInterval);
+                        $('#timer').text('Час вийшов! Ви програли.');
+                        $('.cell').addClass('taken');
+                        addGameResult(-1);
+                    }
+                }, 1000);
+
+                $('.cell').click(function () {
+                    const number = $(this).data('number');
+                    if (number === currentNumber) {
+                        $(this).addClass('taken');
+                        currentNumber++;
+                        $('#information').text('');
+                        if (currentNumber > 25) {
+                            clearInterval(timerInterval);
+                            const gameTime = 60 - timeLeft;
+                            $('#information').text('Вітаємо! Ви виграли!');
+                            addGameResult(gameTime);
+                        }
+                    } else {
+                        $('#information').text('Не вірна цифра');
+                    }
+                });
+            }
+
+            let randomIntFromRange = (min, max) => {
+                return Math.floor(Math.random() * (max - min + 1) + min);
+            }
+
+            let addGameResult = (time) => {
+                history.push([currentGame++, time])
+                drawHistoryTable()
+            }
+
+            let drawHistoryTable = () => {
+                $('#history tbody').empty()
+                let otherResultColorTaken = false
+
+                const bestResult = Math.min(...history.filter(result => result[1] >= 0).map(result => result[1]));
+                let getRowColor = (time) => {
+                    if (time == -1) { return "#d5d8dc" }
+                    else if (time == bestResult) { return "#fae5d3"; } else {
+                        otherResultColorTaken = !otherResultColorTaken
+                        if (otherResultColorTaken) {
+                            return "#d4e6f1"
+                        } else {
+                            return "#aed6f1"
+                        }
+                    }
+                }
+                history.forEach(result => {
+                    $('#history tbody').append(`
+                        <tr game='${result[0]}'>
+                            <td>Гра ${result[0]}</td>
+                            <td>${result[1] >= 0 ? result[1] + 'сек' : "не завершено"}</td>
+                        </tr>`)
+                    $(`#history tr[game='${result[0]}']`).css('background-color', getRowColor(result[1]));
+                });
+            }
+
+            $('#restart-button').click(() => {
+                initializeGame();
+            });
+        });
+    </script>
+</body>
+
+</html>
