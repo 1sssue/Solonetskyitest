@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Моє хобі</title>
+    <link rel="stylesheet" href="style.css">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.10.3/babel.min.js" crossorigin></script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel" data-presets="react,stage-3">
+        class App extends React.Component {
+            render() {
+                return (
+                    <div className="App">
+                        <header className="App-header">
+                            <h1>Моє хобі</h1>
+                        </header>
+                        <main>
+                            <Hobby />
+                        </main>
+                    </div>
+                );
+            }
+        }
+
+        class Hobby extends React.Component {
+            render() {
+                return (
+                    <div>
+                        <p>
+                            Моє хобі — ходити Карпатами. Для мене це не просто мандри, а можливість відчути справжній зв'язок з природою. Я обожнюю ранковий туман, що повільно піднімається над горами, запах хвойних лісів і неймовірні краєвиди, які розкриваються після кожного підйому. Під час походів я відчуваю спокій, свободу і внутрішню гармонію. Кожна подорож — це новий досвід, виклик та маленька перемога над собою, яка наповнює енергією і натхненням.
+                        </p>
+                    </div>
+                );
+            }
+        }
+
+        const rootElement = document.getElementById("root");
+        const root = ReactDOM.createRoot(rootElement);
+        root.render(<App />);
+    </script>
+</body>
+
+</html>
