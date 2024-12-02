@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label{
+            display: block;
+            margin: 7px 0;
+        }
+        .block{
+            border-radius: 10px; 
+            border: 2px solid black;
+            padding: 20px;             
+            margin: 0 auto; 
+            max-width: 250px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="block">
+        <form action="/zamovlenna" method="post">
+    <label for="account-number">Номер банківського рахунку:</label>
+    <input type="text" id="account-number" required>
+    <label for="user-id">Особистий номер користувача</label>
+    <input type="text" id="user-id" required>
+    <label for="products">Товар</label>
+    <select>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
+    <label for="comments">Коментарі</label>
+    <textarea id="comments" rows="4" cols="30"></textarea>
+    <label for="payment">Виберіть вид оплати</label>
+    <input type="checkbox" id="payment" value="Готівковий">Готівковий</label>
+    <label><input type="checkbox" id="payment" value="Безготівковий">Безготівковий</label>
+    <label for="additional-info">Додаткова інформація</label>
+    <label><input type="radio" name="additional-info" value="дані про залишки на рахунку ">Дані про залишки на рахунку </label>
+    <label><input type="radio" name="additional-info" value="список останніх виплат по рахунку">Список останніх виплат по рахунку</label>
+    <button type="submit">Надіслати замовлення</button>
+    </form>
+    </div>
+</body>
+</html>
