@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Про себе</title>
+        <meta charset="UTF-8">
+        <Description></Description>
+        <Keywords></Keywords>
+    </head>
+    <body bgcolor="#add8e6" text="#330066">
+        <h1><p align="center">Про себе</p></h1>
+		<img src="image/icon.jpg" align="left">
+        <p align="justify">
+            <font face="georgia">
+                <b>Lorem</b> ipsum dolor sit amet, consectetur adipiscing elit. <i>Donec</i> a auctor tortor. In semper at lectus id tempor. Nam at finibus nunc, eget faucibus nisi. Maecenas iaculis dolor egestas urna vulputate condimentum. Aenean suscipit urna semper, ullamcorper odio non, tempor libero. Aliquam malesuada lobortis condimentum. Donec sed lectus congue, convallis nisi non, pretium purus. Aliquam eleifend sed arcu ac molestie. Donec venenatis, massa in lobortis auctor, felis libero aliquam nisl, id pulvinar magna nisi eu augue. Mauris semper lacinia massa vitae semper. Phasellus ut massa neque.
+				<u>Morbi</u> vel lobortis dolor, ut sagittis erat. Sed venenatis felis id consequat auctor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce consectetur dapibus sem vehicula ornare. Vestibulum rhoncus, lectus ac mollis facilisis, purus dui laoreet purus, nec fringilla enim massa at tellus. Sed vestibulum interdum massa, vel pretium eros interdum a. Aliquam sed fringilla enim, ut condimentum turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus mollis lectus sit amet velit sollicitudin iaculis. Ut sit amet eros erat.
+            </font>
+        </p>
+        <h1><p align="center">Моє хобі</p></h1>
+        <h2><p align="center">Програмування</p></h2>
+        <code>
+            file_out.open(<font color="red">"lr18.txt"</font>, <font color="cyan">ios_base::trunc</font>);<br>
+	cout << <font color = "red">"Введіть розмір квадратної матриці "</font>;<br>
+	cin >> n;<br>
+	<font color="blue">int</font> matrix[N][N];<br>
+	<font color="blue">for</font> (i = 0; i < n; i++) {<br>
+		<font color="blue">for</font> (j = 0; j < n; j++) {<br>
+			cout << <font color = "red">"Введіть елемент матриці: "</font> << i + 1 << "," << j + 1 << "=\t";<br>
+			cin >> matrix[i][j];<br>
+			file_out << matrix[i][j] << endl;<br>
+		}<br>
+	}<br>
+	file_out.close();<br>
+	<font color="blue">for</font> (i = 0; i <= n - 1; i++) {<br>
+		<font color="blue">for</font> (j = 0; j <= n - 1; j++) <br>
+			cout << matrix[i][j] << " ";<br>
+			cout << endl;<br>
+		}<br>
+	<font color="blue">for</font> (i = 0; i <= n - 1; i++) {<br>
+		max = matrix[i][0];<br>
+		min = matrix[i][0];<br>
+		<font color="blue">for</font> (j = 0; j <= n - 1; j++) {<br>
+			<font color="blue">if</font> (max <= matrix[i][j])<br>
+				max = matrix[i][j];<br>
+			<font color="blue">if</font> (min >= matrix[i][j])<br>
+				min = matrix[i][j];<br>
+		}<br>
+		cout <font color = red><< "Максимальне значення " << i + 1 << " - го рядка ="</font> << max << endl;<br>
+		cout << <font color = red>"Мінімальне значення " << i + 1 << " - го рядка ="</font> << min << endl;<br>
+		cout << endl;<br>
+	}<br>
+	<font color="blue">for</font> (i = 0; i < n; i++)<br>
+	{<br>
+		int min_index = min_element(matrix[i], matrix[i] + n) - matrix[i];<br>
+		int max_index = max_element(matrix[i], matrix[i] + n) - matrix[i];<br>
+		<font color="blue">if</font> (min_index > max_index)<br>
+		{<br>
+			reverse(matrix[i], matrix[i] + n);<br>
+		}<br>
+	}<br>
+	cout << <font color = "red">"Перетворена матриця"</font> << endl;<br>
+	<font color="blue">for</font> (int i = 0; i < n; i++)<br>
+	{<br>
+		<font color="blue">for</font> (int j = 0; j < n; j++)<br>
+		{<br>
+			cout << matrix[i][j] << " ";<br>
+		}<br>
+		cout << endl;<br>
+	}<br>
+	<font color="blue">return</font>	0;<br>
+}<br><br>
+
+            </code>
+            <p align="right"><i><u>Студент групи 303-ТН Борута<br>
+                Н.В.</u></i></p>
+    </body>
+</html>
