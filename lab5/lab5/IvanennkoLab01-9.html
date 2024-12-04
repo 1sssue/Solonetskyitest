@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ukr">
+<head>
+    <title>index.html</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+
+    <meta name="description" content="Особистий блог студента, де він розповідає про своє хобі, навчання та програмування.">
+    <meta name="keywords" content="Програмування, Полтавська політехніка, C++, Java, Python">
+
+    <style>
+        body {
+            background-color: black; /* Змінити колір фону на чорний */
+            color: white; /* Змінити колір тексту на білий */
+            font-family: "Gill Sans", sans-serif; /* Змінити шрифт тексту на Gill Sans */
+        }
+    </style>
+</head>
+<body>
+    <div style="text-align: center;">
+        <h1>Про себе</h1>
+    </div>
+    <div style="text-align: justify;">
+        <p> Народився в Полтаві 2 червня 2005го року, навчався у школі №29. Після закінчення школи вступив до Національного університету «Полтавська політехніка імені Юрія Кондратюка».</p>
+        <p></p>
+    </div>
+    <div style="text-align: center;">
+        <h1>Моє хоббі</h1>
+    </div>
+    <div  style="text-align: justify;">
+        <p>Маю багато хоббі, серед яких я окремо підкреслю програмування, спілкування у соц. мережах та відеоігри.</p>
+        <p>У вільний час вивчаю різні мови програмування зокрема c++, c#, python, але особливу увагу надаю мові Java.</p>
+        <p>Вдосконалюю свою навички з англіської мови.</p>
+    </div>
+    <div style="text-align: center;">
+        <h2>Програмування</h2>
+        <pre><p style="text-align: left;">using System;
+
+public class Solution {
+    public static void main(String[] args) {
+        int decimalNumber = 21;
+        System.out.println("Десятичное число " + decimalNumber + " равно восьмеричному числу " + toOctal(decimalNumber));
+        int octalNumber = 25;
+        System.out.println("Восьмеричное число " + octalNumber + " равно десятичному числу " + toDecimal(octalNumber));
+    }
+
+    public static int toOctal(int decimalNumber) {
+        int octalNumber = 0;
+        if (decimalNumber <= 0) {
+            return octalNumber;
+        }
+
+        int i = 0;
+        while (decimalNumber != 0) {
+            octalNumber = (int) (octalNumber + (decimalNumber % 8) * Math.pow(10, i++));
+            decimalNumber = decimalNumber / 8;
+        }
+        return octalNumber;
+    }
+
+    public static int toDecimal(int octalNumber) {
+        int decimalNumber = 0;
+        if (octalNumber <= 0) {
+            return decimalNumber;
+        }
+
+        int i = 0;
+        while (octalNumber != 0) {
+            decimalNumber = (int) (decimalNumber + (octalNumber % 10) * Math.pow(8, i++));
+            octalNumber = octalNumber / 10;
+        }
+        return decimalNumber;
+    }
+}
+}</p></pre>
+<p><a href="IvanennkoLab05-3.htm">Мої гіперпосилання</a></p>
+<p>Підпис: <a href="mailto:dima.vacilyev@gmail.com">dima.vacilyev@gmail.com</a></p>
+<p><a href="#top">У початок сторінки</a></p>
+    </div>
+        <div>
+            <p align="right"><i><u><font face ="TIMES NEW ROMAN "size="4">Студент групи 301-ТН Васильєв Д.К.</font></u></i></p><br>
+        </div>
+    </body>
+</html>

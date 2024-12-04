@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма з усіма елементами</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6f7ff;
+            margin: 0;
+            padding: 20px;
+        }
+        form {
+            width: 50%;
+            margin: auto;
+            background-color: #f0ffff;
+            border: 1px solid #87ceeb;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, textarea, select, button {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 8px;
+            border: 1px solid #87ceeb;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #87ceeb;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4682b4;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label for="text">Текст:</label>
+        <input type="text" id="text" name="text">
+        
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password">
+        
+        <label for="radio1">Варіант 1:</label>
+        <input type="radio" id="radio1" name="radioGroup" value="1">
+        <label for="radio2">Варіант 2:</label>
+        <input type="radio" id="radio2" name="radioGroup" value="2">
+        
+        <label for="checkbox">Погоджуюсь:</label>
+        <input type="checkbox" id="checkbox" name="checkbox">
+        
+        <label for="select">Виберіть:</label>
+        <select id="select" name="select">
+            <option value="1">Опція 1</option>
+            <option value="2">Опція 2</option>
+        </select>
+        
+        <label for="textarea">Текстове поле:</label>
+        <textarea id="textarea" name="textarea" rows="5" cols="30"></textarea>
+        
+        <button type="submit">Надіслати</button>
+    </form>
+</body>
+</html>
+

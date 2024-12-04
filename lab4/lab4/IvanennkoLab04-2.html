@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IvanennkoLab04-2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .marquee {
+            margin: 10px 0;
+            padding: 20px;
+            height: 50px;
+        }
+        .row1 {
+            background-color: lightblue;
+        }
+        .row2 {
+            background-color: lightgreen;
+        }
+        .row3 {
+            background-color: lightcoral;
+        }
+        .row4 {
+            background-color: lightgoldenrodyellow;
+        }
+        .row5 {
+            background-color: lightpink;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Текст коливається з боку в бік -->
+    <div class="marquee row1">
+        <marquee behavior="alternate" direction="left">Текст коливається з боку в бік</marquee>
+    </div>
+
+    <!-- Текст пробігає справа наліво і з'являється знову -->
+    <div class="marquee row2">
+        <marquee direction="right">Текст пробігає справа наліво і з'являється знову</marquee>
+    </div>
+
+    <!-- Текст пробігає зліва направо і зупиняється -->
+    <div class="marquee row3">
+        <marquee direction="left" scrollamount="10" loop="1">Текст пробігає зліва направо і зупиняється</marquee>
+    </div>
+
+    <!-- Текст з різним запізненням, перший -->
+    <div class="marquee row4">
+        <marquee scrollamount="3">Текст переміщується з повільним запізненням</marquee>
+    </div>
+
+    <!-- Текст з різним запізненням, другий -->
+    <div class="marquee row5">
+        <marquee scrollamount="10">Текст переміщується з швидким запізненням</marquee>
+    </div>
+
+</body>
+</html>
+
+
+

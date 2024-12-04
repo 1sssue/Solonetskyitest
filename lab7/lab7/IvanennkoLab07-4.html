@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Замовлення товару</title>
+</head>
+<body>
+    <form>
+        <h1>Замовлення товару</h1>
+        <label for="account">Номер банківського рахунку:</label>
+        <input type="text" id="account" name="account"><br><br>
+
+        <label for="userNumber">Особистий номер користувача:</label>
+        <input type="text" id="userNumber" name="userNumber"><br><br>
+
+        <label for="products">Список товарів:</label>
+        <select id="products" name="products" multiple>
+            <option value="item1">Товар 1</option>
+            <option value="item2">Товар 2</option>
+            <option value="item3">Товар 3</option>
+        </select><br><br>
+
+        <label for="comments">Коментарі:</label>
+        <textarea id="comments" name="comments" rows="5" cols="30"></textarea><br><br>
+
+        <p>Вид оплати:</p>
+        <label for="cash">Готівковий:</label>
+        <input type="radio" id="cash" name="payment" value="cash">
+        <label for="nonCash">Безготівковий:</label>
+        <input type="radio" id="nonCash" name="payment" value="nonCash"><br><br>
+
+        <p>Додаткова інформація:</p>
+        <label for="balance">Дані про залишки:</label>
+        <input type="checkbox" id="balance" name="balance">
+        <label for="payments">Список останніх виплат:</label>
+        <input type="checkbox" id="payments" name="payments"><br><br>
+
+        <input type="submit" value="Надіслати">
+    </form>
+</body>
+</html>
