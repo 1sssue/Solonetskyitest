@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+.row {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+.row:nth-child(1) { background-color: #ffcccc; animation: oscillateVertically 4s infinite ease-in-out; }
+.row:nth-child(2) { background-color: #ccffcc; animation: bottomToTop 5s infinite linear; }
+.row:nth-child(3) { background-color: #ccccff; animation: topToBottom 5s linear forwards; }
+.row:nth-child(4) { background-color: #ffccff; animation: delayMoveVert1 6s infinite linear; }
+.row:nth-child(5) { background-color: #ffffcc; animation: delayMoveVert2 8s infinite linear; }
+
+.text, .images {
+    position: absolute;
+    transform: translateY(0);
+    will-change: transform;
+}
+.images img {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+}
+
+/* Анімації */
+@keyframes oscillateVertically {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-50px); }
+}
+
+@keyframes bottomToTop {
+    0% { transform: translateY(100%); }
+    100% { transform: translateY(-100%); }
+}
+
+@keyframes topToBottom {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes delayMoveVert1 {
+    0% { transform: translateY(100%); }
+    50% { transform: translateY(50%); }
+    100% { transform: translateY(-100%); }
+}
+
+@keyframes delayMoveVert2 {
+    0% { transform: translateY(100%); }
+    25% { transform: translateY(75%); }
+    100% { transform: translateY(-100%); }
+}

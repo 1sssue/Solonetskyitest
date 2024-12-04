@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+.row {
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    position: relative;
+    white-space: nowrap;
+}
+.row:nth-child(1) {
+    background-color: #ffcccc;
+    animation: oscillate 3s infinite alternate ease-in-out;
+}
+.row:nth-child(2) {
+    background-color: #ccffcc;
+    animation: rightToLeft 5s infinite linear;
+}
+.row:nth-child(3) {
+    background-color: #ccccff;
+    animation: leftToRight 5s 1 linear forwards;
+}
+.row:nth-child(4) {
+    background-color: #ffccff;
+    animation: delayMove1 6s infinite linear;
+}
+.row:nth-child(5) {
+    background-color: #ffffcc;
+    animation: delayMove2 8s infinite linear;
+}
+.text {
+    position: absolute;
+    will-change: transform;
+}
+@keyframes oscillate {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(calc(100% - 100vw)); }
+    100% { transform: translateX(0); }
+}
+@keyframes rightToLeft {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+@keyframes leftToRight {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+}
+@keyframes delayMove1 {
+    0% { transform: translateX(100%); }
+    25% { transform: translateX(75%); }
+    100% { transform: translateX(-100%); }
+}
+@keyframes delayMove2 {
+    0% { transform: translateX(100%); }
+    50% { transform: translateX(50%); }
+    100% { transform: translateX(-100%); }
+}
