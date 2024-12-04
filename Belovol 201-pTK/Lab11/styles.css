@@ -1,0 +1,62 @@
+/* Загальний стиль */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('image/background.jpg'); /* Фонове зображення */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: #333;
+    padding: 20px 40px;
+}
+
+/* Стиль заголовків */
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #4CAF50;
+    font-style: normal;
+    text-shadow: 2px 2px 4px black; /* Чорна обводка */
+}
+
+/* Стиль абзаців */
+p {
+    text-indent: 20px; /* Червоний рядок */
+    text-align: justify; /* Вирівнювання тексту */
+    font-style: italic;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 1px 1px 2px white; /* Біла обводка для тексту */
+}
+
+/* Стиль зображень */
+img {
+    display: block;
+    margin: 20px auto;
+    max-width: 80%;
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Стиль посилань */
+a {
+    text-decoration: none;
+    color: #2196F3;
+}
+
+a:visited {
+    color: #9C27B0;
+}
+
+a:hover {
+    color: #FF5722;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #F44336;
+}
