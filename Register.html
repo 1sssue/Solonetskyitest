@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>РЕЄСТРАЦІЯ</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* th, td {
+            border: 1px solid white;
+        } */
+        .maintable{
+            padding-top: 10%;
+        }
+        .button {
+            font-size: 34px; /* змінюйте значення за потребою */
+        }
+        .home{
+            margin-left: 50%;
+        }
+    </style>
+</head>
+<body>
+     <div class="home" style=" text-align: center; font-size: 25px; background-color: rgba(0, 0, 0, 0.25); width: 20px; padding: 10px; border: 2px solid white; border-radius: 10px;">
+        <a href="index.html"><img src="Image/home.png" height=20px; ></a>
+    </div>
+    <table  cellspacing="1" cellpadding="5" align="center" class="maintable" >
+        <tr>
+            <th align="center" colspan="2"><font color="white" size="8">Реєстрація</font></th>
+        </tr>
+        <form id="registrationForm">
+            <tr>
+
+                <td width="40%" align="right">Прізвище</td>
+                <td><input type="text" name="surname" size="25%" maxlength="30"></td>
+            </tr>
+            <tr>
+                
+            </tr>
+            <tr>
+
+                <td width="40%"align="right">Ім'я, по батькові</td>
+                <td><input type="text" name="interesting" size="25%" maxlength="30"></td>
+            </tr>
+            <tr>
+
+                <td width="40%"align="right">Дата, рік народження</td>
+                <td><input type="date" name="interesting" size="25%" maxlength="30"></td>
+            </tr>
+            <tr>
+
+                <td width="40%"align="right">Домашня адреса</td>
+                <td><input type="text" name="interesting" size="25%" maxlength="30"></td>
+            </tr>
+            <tr>
+
+                <td width="40%"align="right">Місце навчання</td>
+                <td><input type="text" name="interesting" size="25%" maxlength="30"></td>
+            </tr>
+            <tr>
+
+                <td width="40%"align="right">Телефон</td>
+                <td><input type="text" name="interesting" size="25%" maxlength="30"></td>
+            </tr>
+            <tr>
+
+                <td width="40%"align="right">E-mail</td>
+                <td><input type="text" name="interesting" size="25%" maxlength="30"></td>
+            </tr>
+            <tr>
+
+                <td width="40%"align="right">Введіть ваш логін</td>
+                <td><input type="text" name="interesting" size="25%" maxlength="30"></td>
+            </tr>
+            <tr>
+
+                <td width="40%"align="right">Введіть ваш пароль</td>
+                <td><input type="text" name="interesting" size="25%" maxlength="30"></td>
+            </tr>
+
+                <td align="right">Стать</td>
+                <td>
+                    <label for="male">Чоловік</label>
+                    <input type="radio" id="male" name="gender" value="male" required>
+
+                    <label for="female">Жінка</label>
+                    <input type="radio" id="female" name="gender" value="female" required>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1" align="right">
+                     <input type="reset" value="Очистити">
+                </td>
+                <td colspan="2" rowspan="2" >
+                    <input type="button" class="button" value="Реєструвати" onclick="register()">
+                </td>
+            </tr>
+            <tr>
+                <!-- <td colspan="1"align="right">
+                    <a href="index.html"><input type="button" value="На головну"></a>
+                </td> -->
+            </tr>
+        </form>
+    </table>
+
+    <script>
+        function register() {
+
+            var surname = document.forms["registrationForm"]["surname"].value;
+            alert("Реєстрація успішна");
+
+            document.getElementById("registrationForm").reset();
+
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>

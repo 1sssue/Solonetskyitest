@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register form</title>
+    <link rel="stylesheet" href="styleRegister12.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header" style="text-align: center; font-size: 18px; background-color: rgba(0, 0, 0, 0.25); padding: 10px;">
+        <div class="header_container">
+            <div class="logo">
+                <h1>Реєстрація</h1>
+            </div>
+    
+            <div class="nav_menu">
+                <a href="LabMenu.html">Головна</a>
+                <a href="Lab12.html">Git Command</a>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="body_container">
+        <div class="form_container">
+
+            <div class="form_header_container">
+                <h1>Реєстрація учасника</h1>
+            </div>
+
+            <div class="text_container">
+                <form action="/submit_registration" method="post">
+
+                    <label for="name">Ім'я:</label><br>
+                    <input class="input_item" type="text" id="name" name="name" required><br><br>
+                
+                    <label for="surname">Прізвище:</label><br>
+                    <input class="input_item" type="text" id="surname" name="surname" required><br><br>
+
+                    <label for="username">Логін:</label><br>
+                    <input class="input_item" type="text" id="username" name="username" required><br><br>
+
+                    <label for="group">Навчальна група:</label><br>
+                    <select class="input_item" id="group" name="group">
+                        <option value="group1">301-TN</option>
+                        <option value="group2">302-TN</option>
+                        <option value="group3">303-TN</option>
+                        <option value="group3">304-TN</option>
+                        <option value="group3">305-TN</option>
+                    </select><br>
+
+                    <label for="password">Пароль:</label><br>
+                    <input class="input_item" type="password" id="password" name="password" required><br><br>
+
+                    <label for="confirm_password">Підтвердження паролю:</label><br>
+                    <input class="input_item" type="password" id="confirm_password" name="confirm_password" required><br><br>
+
+                    <input class="btn" type="submit" value="Зареєструватися">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer">
+            &copy; 2024 Сайт створив студент групи 303-ТН Солонецький Роман. Всі права захищені.
+        </div>
+    </footer>
+</body>
+</html>
