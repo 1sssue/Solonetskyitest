@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реєстрація</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Підключення стилів -->
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Мій особистий блог</h1>
+            <nav>
+                <a href="login.html">Вхід</a>
+                <a href="register.html" class="active">Реєстрація</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="registration-container">
+            <h2>Реєстрація користувача</h2>
+            <form>
+                <label for="surname">Прізвище</label>
+                <input type="text" id="surname" name="surname" required>
+
+                <label for="name">Ім'я</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="login">Логін</label>
+                <input type="text" id="login" name="login" required>
+
+                <label for="group">Навчальна група</label>
+                <select id="group" name="group">
+                    <option value="281">201-пТК</option>
+                    <!-- Додаткові групи, якщо потрібно -->
+                </select>
+
+                <label for="password">Пароль</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="confirm_password">Підтвердження паролю</label>
+                <input type="password" id="confirm_password" name="confirm_password" required>
+
+                <button type="submit">Зареєструватись</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; Всі права захищені.</p>
+    </footer>
+</body>
+</html>
