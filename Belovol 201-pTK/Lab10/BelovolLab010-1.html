@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Розмітка</title>
+    <style>
+        /* Скидання стандартних стилів */
+        body, html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Загальні стилі */
+        .wrapper {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .block {
+            box-sizing: border-box;
+            margin: 3px;
+            border: 1px solid lightgray;
+        }
+
+        /* Float Layout */
+        .float-layout .block {
+            float: left;
+        }
+
+        .float-layout .block1 {
+            width: 100%;
+            height: 30%;
+            background-color: #5DADE2;
+        }
+
+        .float-layout .block2 {
+            width: 32%;
+            height: 20%;
+            background-color: #48C9B0;
+        }
+
+        .float-layout .block3 {
+            width: 32%;
+            height: 20%;
+            background-color: #E74C3C;
+        }
+
+        .float-layout .block4 {
+            width: 32%;
+            height: 20%;
+            background-color: #F4D03F;
+        }
+
+        .float-layout .block5 {
+            width: 100%;
+            height: 30%;
+            background-color: #BA4A00;
+        }
+
+        /* Flexbox Layout */
+        .flex-layout {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3px;
+        }
+
+        .flex-layout .block1 {
+            flex: 1 1 100%;
+            height: 30%;
+            background-color: #5DADE2;
+        }
+
+        .flex-layout .block2 {
+            background-color: #BA4A00;
+        }
+
+        .flex-layout .block3 {
+            background-color: crimson;
+        }
+
+        .flex-layout .block4 {
+            flex: 1 1 calc(33.33% - 6px);
+            height: 20%;
+            background-color: darkblue;
+        }
+
+        .flex-layout .block5 {
+            flex: 1 1 100%;
+            height: 30%;
+            background-color: #BA4A00;
+        }
+
+        /* Grid Layout */
+        .grid-layout {
+            display: grid;
+            grid-template-rows: 30% 20% 30%;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 3px;
+        }
+
+        .grid-layout .block1 {
+            grid-column: 1 / -1;
+            background-color: #5DADE2;
+        }
+
+        .grid-layout .block2 {
+            background-color: #48C9B0;
+        }
+
+        .grid-layout .block3 {
+            background-color: #E74C3C;
+        }
+
+        .grid-layout .block4 {
+            background-color: #F4D03F;
+        }
+
+        .grid-layout .block5 {
+            grid-column: 1 / -1;
+            background-color: #BA4A00;
+        }
+
+        /* Адаптивність */
+        @media (max-width: 500px) {
+            .flex-layout .block, 
+            .grid-layout .block {
+                flex: 1 1 100%;
+                grid-column: 1 / -1;
+            }
+        }
+
+        @media (min-width: 500px) and (max-width: 750px) {
+            .flex-layout .block2, 
+            .flex-layout .block3, 
+            .flex-layout .block4 {
+                flex: 1 1 50%;
+            }
+        }
+
+        @media (min-width: 750px) {
+            .flex-layout .block2, 
+            .flex-layout .block3, 
+            .flex-layout .block4 {
+                flex: 1 1 calc(33.33% - 6px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Float Layout</h1>
+    <div class="wrapper float-layout">
+        <div class="block block1"></div>
+        <div class="block block2"></div>
+        <div class="block block3"></div>
+        <div class="block block4"></div>
+        <div class="block block5"></div>
+    </div>
+
+    <h1>Flexbox Layout</h1>
+    <div class="wrapper flex-layout">
+        <div class="block block1"></div>
+        <div class="block block2"></div>
+        <div class="block block3"></div>
+        <div class="block block4"></div>
+        <div class="block block5"></div>
+    </div>
+
+    <h1>Grid Layout</h1>
+    <div class="wrapper grid-layout">
+        <div class="block block1"></div>
+        <div class="block block2"></div>
+        <div class="block block3"></div>
+        <div class="block block4"></div>
+        <div class="block block5"></div>
+    </div>
+</body>
+</html>
