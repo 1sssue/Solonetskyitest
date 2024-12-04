@@ -1,0 +1,63 @@
+div{
+    margin: 3px;
+    border-radius: 1px;
+    border-color: whitesmoke;
+    width: 100%;
+}
+div.wrapper{
+    width: 100%;
+    height: 100vh;
+}
+div.grey{
+    background: grey;
+    height: 700px;
+    width: 20%;
+}
+div.brown{
+    background: brown;
+    height: 290px;
+}
+div.flex{
+    display: flex;
+}
+div.blue{
+    background: blue;
+    height: 200px;
+}
+div.yellow{
+    background: yellow;
+    width: 30%;
+    height: 500px;
+}
+div.green{
+    background: green;
+    height: 250px;
+}
+div.cyan{
+    background: cyan;
+    width: 50%;
+    height: 250px;
+}
+div.red{
+    background: red;
+    width: 50%;
+    height: 250px;
+}
+
+@media screen and (min-width: 750px) and (max-width: 980px){
+    div.flex{
+        flex-direction: column;
+    }
+    div.grey{
+        width: 100%;
+    }
+    div.yellow{
+        width: 100%;
+    }
+    div.cyan{
+        width: 100%;
+    }
+    div.red{
+        width: 100%;
+    }
+}

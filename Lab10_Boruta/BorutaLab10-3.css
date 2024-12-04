@@ -1,0 +1,58 @@
+div.wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 5px;
+    height: 100vh;
+    grid-template-areas:
+        "blue blue blue gray"
+        "cyan red yellow gray"
+        "green green yellow gray"
+        "brown brown brown brown";
+    grid-template-rows: 25% 20% 23% 20%;
+    
+}
+div.brown{
+    background: brown;
+    grid-area: brown;
+}
+div.gray{
+    background: gray;
+    grid-area: gray;
+}
+div.blue{
+    background: blue;
+    grid-area: blue;
+}
+div.yellow{
+    background: yellow;
+    grid-area: yellow;
+}
+div.green{
+    background: green;
+    grid-area: green;
+}
+div.red{
+    background: red;
+    grid-area: red;
+}
+div.cyan{
+    background: cyan;
+    grid-area: cyan;
+}
+
+@media (max-width: 980px) {
+    div.wrapper {
+    grid-template-rows: repeat(7, auto);
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "blue"
+    "cyan"
+    "red"
+    "yellow"
+    "green"
+    "brown"
+    "gray";
+    }
+  }
+  
+ 
