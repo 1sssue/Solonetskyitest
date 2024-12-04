@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>  
+<head>
+    <meta charset="UTF-8">
+    <title>Мій сайт | ЛР 9</title>
+    <meta name="description">
+    <meta name="keywords">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h1 {
+            margin-left: 200px;
+            margin-right: 200px;
+            text-align: center;
+            background-color: #66A5AD;
+            color: #092e38;
+            padding: 5px;
+            border-radius: 10px;
+        }
+        h2 {
+            margin-left: 300px;
+            margin-right: 300px;
+            text-align: center;
+            background-color: #C4DFE6;
+            color: #092e38;
+            padding: 5px;
+            border-radius: 10px;
+        }
+        p {
+            margin-left: 300px;
+            margin-right: 300px;
+            font-size: 20px;
+            text-indent: 20px;
+            text-align: justify;
+            margin-bottom: 10px;
+            color:#d6f7ff
+        }
+        code {
+            display: inline-block; 
+            text-align: left;
+
+        }
+		a {
+            color:#d6f7ff
+        }
+        .icons {
+			display: flex;
+			justify-content: center;
+		}
+		.icons figcaption {
+            margin-bottom: -25px;
+            text-align: center;
+		}
+        .icons img {
+            width: 50px;
+            height: 50px;
+			margin: 10px;
+            margin-top: -25px;
+            margin-bottom: 5px;
+		}
+        .mycontact p {
+            text-align: center;
+        }
+    </style>
+</head>     
+
+<body>
+    <header style="text-align: center; font-size: 18px; background-color: rgba(0, 0, 0, 0.25); padding: 10px;">
+        <div class="header-logo">Мій сайт</div>
+        <nav class="header-nav">
+            <a href="index.html">Головна</a>
+            
+            <li class="dropdown">
+                <a>Навігація</a>
+                <div class="dropdown-content" >
+                    <a href="Poltava.html">Моє рідне селище</a>
+                    <a href="Poltava.html#vyzipolt">Вузи Полтавщини</a>
+                    <a href="index.html#food">Мої улюблені страви</a>
+                    <a href="LabMenu.html">Лабораторні</a>        
+                </div>
+            </li>
+
+            <a href="Register.html">Реєстрація</a>
+        </nav>
+        <table class="Sign_in">
+            <tr>
+                <th align="right">ЛОГІН</th>
+                <td><input  type="text" id="login" name="login" style="width: 88%; margin-left: -6%;"></td>
+            </tr>
+            <tr>
+                <th align="right">ПАРОЛЬ</th>
+                <td><input type="password" id="password" name="password" style="width: 88%; margin-left: -6%;"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button type="submit" style="width: 36%; margin-left: -6%;" >УВІЙТИ</  >
+                    <a href="Register.html"><button type="button" style="width: 56%; margin-left: 1%;">РЕЄСТРАЦІЯ</button></a>
+                </td>
+            </tr>
+        </table>
+    </header>
+    
+    <h1>ПРО СЕБЕ</h1>
+    <p>Я Солонецький Роман Миколайович, навчаюсь за спеціальністю 122 <b>«Комп'ютерні науки»</b> в Національному університеті <b>«Полтавська політехніка імені Юрія Кондратюка»</b>.</p>
+    <p>Кожного буднього дня я ходжу в мій улюблений університет, щоб отримати знання та поспілкуватися з одногрупниками.</p>
+    <p>Проживаю в гуртожитку №1 який знаходиться неподалік від мого університету. </p>
+
+    <h1>МОЄ ХОБІ</h1>
+    <p>Одне з моїх хоббі - перегляд різних анімаційних шедеврів таких як: <b>OnePiece, Death Note, Naruto, JOJO</b> а також фільмів та серіалів. </p>
+    <p>Окрім цього у вільний час займаюся обробкою фотографій та відео в застосуваннях <b>Adobe Photoshop, Adobe Premiere Pro </b>та<b> CapCut</b>.</p>
+    
+    <h2>Програмування</h2>
+    <p>В цьому семестрі я активно став вивчати мови розмітки HTML та CSS.</p>
+    <p>Також в минулому семестрі я вивчав мову С++ ось останній невеликий код який я писав:</p>
+	    
+    <div style="text-align: center;">
+    <span style="display: inline-block; text-align: left; background: #13141f;border: 2px solid white; border-radius: 10px;"><pre>
+    <code>
+#include&lt;iostream&gt;
+#include&lt;Windows.h&gt;
+#include&lt;string.h&gt;
+#include&lt;fstream&gt;
+using namespace std;
+
+int main() {
+      SetConsoleCP(1251);
+      SetConsoleOutputCP(1251);
+
+      int n; //Кількість елементів массиву
+      int i; //Параметр циклу
+      int k, l;
+      int max_l, min_l;
+      string arr[10];
+      string temp;
+
+      cout &lt;&lt; "Введіть кількість елементів масиву\n";
+      cin &gt;&gt; n;
+      for (i = 0; i &lt;= n - 1; i)
+      {
+          cout &lt;&lt; "Beдiть" &lt;&lt; i + 1 &lt;&lt; "-ий елемент массиву\t";   
+          cin &gt;&gt; arr[i];
+          cout &lt;&lt; endl;
+      }
+
+      for (i = 0; i &lt;= n - 1; i)
+          cout &lt;&lt; arr[i] &lt;&lt; endl;
+
+      max_l = size(arr[0]);
+      min_l = size(arr[0]);
+
+      k = 0;
+      l = 0;
+
+      for (i = 0; i &lt;= n - 1; i)
+      {
+          if (max_l &lt;= size(arr[i]))
+          {
+              max_l = size(arr[i]);
+              k = i;
+          }
+          if (min_l &gt;= size(arr[i]))
+          {
+              min_l = size(arr[i]);
+              l = i;
+          }
+      }
+      cout &lt;&lt; endl;
+      cout &lt;&lt; "Максимальний елемент - ";
+      cout &lt;&lt; arr[k] &lt;&lt; endl;
+      cout &lt;&lt; endl;
+      cout &lt;&lt; "Мінімальний елемент - ";
+      cout &lt;&lt; arr[l] &lt;&lt; endl;
+      cout &lt;&lt; endl;
+      cout &lt;&lt; "Заміна елементів\n";
+      temp = arr[l];
+      arr[l] = arr[k];
+      arr[k] = temp;
+      for (i = 0; i &lt;= n - 1; i)
+          cout &lt;&lt; arr[i] &lt;&lt; endl;;
+
+      cout &lt;&lt; endl;;
+      return 0;
+    }
+</code>
+    </pre></span>
+    </div>
+
+    <h2>Дисципліни цього семестру (4 семестр)</h2>
+    <ol>
+        <li>Web-дизайн та Web-програмування</li>
+        <li>Іноземна мова (за професійним спрямуванням)	</li>
+        <li>Комп'ютерні мережі</li>
+        <li>Комп'ютерні технології та програмування</li>
+        <li>Кросплатформене програмування</li>
+        <li>Об'єктно-орієнтоване програмування</li>
+        <li>Теорія алгоритмів</li>
+        <li>Фізичне виховання</li>
+
+    </ol>
+    <h2>Мої улюблені страви</h2>
+    <a name="food"></a>
+            <li>Булочка з сосіской</li>
+            <li>Чай</li>
+            <li>Бутерброд</li>
+    
+	<h1>СОЦ МЕРЕЖІ</h1>
+    <div class="icons" >
+		<figure>
+			<a href="https://www.facebook.com" target="_blank"><img src="Image/facebook.png" alt="Facebook"></a>
+			<figcaption >
+                <a href="https://www.facebook.com" target="_blank">Facebook</a>
+            </figcaption>
+		</figure>
+    
+		<figure>
+            <a href="https://www.twitter.com" target="_blank"><img src="Image/twitter.png" alt="Twitter"></a>
+			<figcaption>
+                <a href="https://www.twitter.com" target="_blank">Twitter</a>
+            </figcaption>
+		</figure>
+    
+		<figure>
+			<a href="https://www.instagram.com" target="_blank"><img src="Image/instagram.png" alt="Instagram"></a>
+			<figcaption>
+                <a href="https://www.instagram.com" target="_blank">Instagram</a>
+            </figcaption>
+		</figure>
+    </div>
+  <h1>КОНТАКТНА ІНФОРМАЦІЯ</h1>
+    <div class="mycontact">
+        <p>Номер телефону: <b>+38 (063) 590-74-16</b></p>
+        <p><a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl&pli=1#inbox?compose=DmwnWslvtRKhrDdsLZlDWzmfhjdLgsntQqhnrLBnqVHZBQNQxhpcClgrdxPHQNpzTVxCSvkbghFV">Email: rsoloneckij17@gmail.com</a></p>
+    </div>
+
+    <p style="text-align: center; color: #092e38; background-color: #C4DFE6; border-radius: 5px;"><i><b>Студент групи 203ТН Солонецький Роман Миколайович</b></i></p>
+    <br>
+    <p style="text-align: center;"><a href="#top" style="background-color: #003036; padding: 5px; border-radius: 5px;">НА ПОЧАТОК</a></p>
+    <br>
+    <footer>
+        <div class="footer-info">
+            &copy; 2024 Сайт створив студент групи 303-ТН Солонецький Роман. Всі права захищені.
+        </div>
+    </footer>
+</body>
+</html>

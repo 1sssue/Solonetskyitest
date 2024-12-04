@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "intro", sans-serif;
+    background-image: url("Image/background1.jpg")  ;
+    background-size: cover;
+    background-position: center;
+    color:#d6f7ff
+}
+
+.header_container{
+    width: 90%;
+    font-family: 'Afacad', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.logo p{
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.nav_menu a{
+    padding-right: 10px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.column_container{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.body_container{
+    display: flex;
+    justify-content: center;
+}
+
+.create_part, .observe_part, .second_column, .third_column, .fifth_block, .six_block{
+    line-height: 30px;
+    color: rgb(173, 173, 173);
+}
+
+.column_title{
+    font-size: 25px;
+    font-weight: 700;
+    color: white;
+}
+
+.footer{
+    display: flex;
+    width: 100%;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №10</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+        body {
+            color: black
+        }
+
+        .wrapper { /* Головний контейнер */
+            width: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        
+        .block {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            float: left;
+            width: calc(33.33% - 3px);
+            margin: 3px;
+            background-color: #6495ED;
+            border: 3px solid white;
+            box-sizing: border-box;
+            height: 200px;
+        }
+
+        .wrapper::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Адаптивність для різних розмірів екранів */
+        @media (max-width: 500px) {
+            .block {
+                width: calc(100% - 6px); 
+            }
+        }
+
+        @media (min-width: 500px) and (max-width: 749px) {
+            .block {
+                width: calc(50% - 6px);
+            }
+        }
+
+        @media (min-width: 750px) and (max-width: 949px) {
+            .block {
+                width: calc(33.33% - 6px);
+            }
+        }
+
+        @media (min-width: 950px) and (max-width: 1199px) {
+            .block {
+                width: calc(25% - 6px);
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .block {
+                width: calc(20% - 6px);
+            }
+        }
+        /* Різні кольори для блоків */
+        .block:nth-child(1) { background-color: #FF6347; }
+        .block:nth-child(2) { background-color: #4682B4; }
+        .block:nth-child(3) { background-color: #32CD32; }
+        .block:nth-child(4) { background-color: #FFD700; }
+        .block:nth-child(5) { background-color: #8A2BE2; }
+        .block:nth-child(6) { background-color: #FF4500; }
+        .block:nth-child(7) { background-color: #98FB98; }
+        .block:nth-child(8) { background-color: #DAA520; }
+    </style>
+</head>
+<body>
+    <b><p style="color: white; text-align: center;">Адаптивна сторінка з використанням float</p>
+    <div class="wrapper">
+        <div class="block">Блок 1</div>
+        <div class="block">Блок 2</div>
+        <div class="block">Блок 3</div>
+        <div class="block">Блок 4</div>
+        <div class="block">Блок 5</div>
+        <div class="block">Блок 6</div>
+        <div class="block">Блок 7</div>
+        <div class="block">Блок 8</div>
+    </div></b>
+    <div>
+		<p style="text-align: center;"><a href="LabMenu.html" style="color: white;"><b>Повернутись</b></a></p>	</div>
+</body>
+</html>

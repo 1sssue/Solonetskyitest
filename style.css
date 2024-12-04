@@ -1,0 +1,100 @@
+body {
+    font-family: "intro", sans-serif;
+    background-image: url("Image/background1.jpg")  ;
+    background-size: cover;
+    background-position: center;
+
+    color:#d6f7ff
+}
+        /*
+header
+        */
+        header {
+            background-color: #0074D9;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .header-logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .header-nav {
+            margin-top: 20px;
+        }
+
+        .header-nav a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 20px;
+        }
+
+        .header-nav a:hover {
+            text-decoration: underline;
+        }
+         /*
+dropdown
+        */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color:rgba(0, 0, 0, 0.8);
+            width: 230px;
+            height: 92px;
+            border: 1px solid #ddd;
+        }
+        .dropdown-content a {
+            margin-left: -10px;
+            display: block;
+            text-decoration: none;
+            color: white;
+            text-align: left;
+        }
+
+        .header-nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        li {
+            font-size: 20px;
+            text-indent: 20px;
+            text-align: justify;
+            margin-bottom: 14px;
+            color:#d6f7ff
+        }
+         /*
+footer
+        */
+        footer {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-info {
+            margin-top: 10px;
+        }
+
+        .Sign_in {
+            margin-top: -70px;
+            display: flex;
+            justify-content: flex-end;
+        }

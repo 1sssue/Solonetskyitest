@@ -1,0 +1,176 @@
+body {
+  font-family: "intro", sans-serif;
+  background-image: url("Image/background1.jpg")  ;
+  background-size: cover;
+  background-position: center;
+
+  color:#d6f7ff
+}
+
+header {
+  background-color:rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo {
+  font-size: 30px;
+  padding-left: 40px;
+  font-weight: bold;
+  color: white;
+}
+header .menu-bar {
+  padding: 0;
+  margin: 0;
+}
+header .menu-bar .menu {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+  position: relative;
+}
+header .menu-bar .menu-item {
+  position: relative;
+}
+header .menu-bar .menu-item a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+  display: inline-block;
+}
+header .menu-bar .menu-item a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+header .menu-bar .menu-item:hover .submenu {
+  display: flex !important;
+}
+header .menu-bar .menu .submenu {
+  position: absolute;
+  top: 100%;
+  background-color: rgba(32, 25, 53, 0.699);
+  display: none;
+}
+header .menu-bar .menu .submenu ul {
+  padding: 10px 0;
+}
+header .menu-bar .menu .submenu li {
+  list-style: none;
+}
+header .menu-bar .menu .submenu li a.title-menu {
+  color: white !important;
+
+  font-weight: 700;
+  font-size: 17px;
+}
+header .menu-bar .menu .submenu li a {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  padding: 0 15px;
+  line-height: 30px;
+}
+header .menu-bar .menu .submenu div a {
+  padding: 10px 20px;
+  display: block;
+}
+header .menu-bar .menu .submenu div a:hover {
+  background-color: #444;
+  color: #ffb400;
+}
+header .auth a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+  display: inline-block;
+}
+header .auth a:hover {
+  background-color: rgba(0, 0, 0, 0.3);f;
+}
+
+main {
+  height: 100%;
+}
+main section.top .navigation {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+main section.top .movie-list {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+main section.movies .navigation {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+main section.movies .movie-list {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+main section.anime .navigation {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+main section.anime .movie-list {
+  background-color: rgba(0, 0, 0, 0.3);
+  
+}
+main .navigation {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  background-color: #333030;
+  padding: 0px 15px 0 20px;
+  margin-top: 10px;
+}
+main .navigation a {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  color: #9cb9d1;
+  text-decoration: none;
+  margin: 18px;
+}
+main .navigation a:hover {
+  color: #eef0f6;
+}
+
+.movie-list {
+  display: flex;
+  padding: 15px;
+  gap: 10px;
+  justify-content: space-evenly;
+}
+.movie-list .movie-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+  padding-bottom: 5px;
+  background-color: rgba(0, 0, 0, 0.185);
+}
+.movie-list .movie-item img {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+
+}
+.movie-list .movie-item p {
+  margin: 4px;
+  padding: 4px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.footer{
+  display: flex;
+  width: 100%;
+  height: 80px;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
