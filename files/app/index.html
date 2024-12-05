@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мультфільми та серіали</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <style>
+      p {
+            text-align: center;       /* Вирівнювання тексту по горизонталі */
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Лого</div>
+        <nav>
+            <a href="#">Фільми</a>
+            <a href="#">Серіали</a>
+            <a href="#">Мультфільми</a>
+            <a href="#">Підбірки</a>
+        </nav>
+    </header>
+    <div class="container">
+    <section>
+        <h2 class="section-title">Найкращі мультсеріали</h2>
+        <div class="slider">
+            <button class="arrow left-arrow" data-action="scrollLeft" data-slider="slider1" style="margin-right: 8px;">&lt;</button>
+            <ul class="slider-content" id="slider1">
+                <li class="card"><img src="img/film1.jpg" alt="Мультфільм 1"><p>Леді Баг та Суперкіт</p></li>
+                <li class="card"><img src="img/film2.jpg" alt="Мультфільм 2"><p>Клуб Вінкс</p></li>
+                <li class="card"><img src="img/film3.jpg" alt="Мультфільм 3"><p>Евер Афтер Хай</p></li>
+                <li class="card"><img src="img/film4.jpg" alt="Мультфільм 4"><p>Монстер Хай</p></li>
+                <li class="card"><img src="img/film5.jpg" alt="Мультфільм 5"><p>Софія Прекрасна</p></li>
+                <li class="card"><img src="img/film6.jpg" alt="Мультфільм 6"><p>Рая</p></li>
+                <li class="card"><img src="img/film7.jpg" alt="Мультфільм 7"><p>Шафа Хлої</p></li>
+                <li class="card"><img src="img/film8.jpg" alt="Мультфільм 8"><p>Рапунцель</p></li>
+            </ul>
+            <button class="arrow right-arrow" data-action="scrollRight" data-slider="slider1" style="margin-left: 8px;">&gt;</button>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">Найкращі фільми</h2>
+        <div class="slider">
+            <button class="arrow left-arrow" data-action="scrollLeft" data-slider="slider2" style="margin-right: 8px;">&lt;</button>
+            <ul class="slider-content" id="slider2">
+                <li class="card"><img src="img/series1.jpg" alt="Мультсеріал 1"><p>Каскадер</p></li>
+                <li class="card"><img src="img/series2.jpg" alt="Мультсеріал 2"><p>Джуманджі</p></li>
+                <li class="card"><img src="img/series3.jpg" alt="Мультсеріал 3"><p>Пінгвіни</p></li>
+                <li class="card"><img src="img/series4.jpg" alt="Мультсеріал 4"><p>Джокер</p></li>
+                <li class="card"><img src="img/series5.jpg" alt="Мультсеріал 5"><p>Погані хлопці</p></li>
+                <li class="card"><img src="img/series6.jpg" alt="Мультсеріал 6"><p>Чаклунка</p></li>
+                <li class="card"><img src="img/series7.jpg" alt="Мультсеріал 7"><p>Дім дивних дітей</p></li>
+                <li class="card"><img src="img/series8.jpg" alt="Мультсеріал 8"><p>Червоне сповіщення</p></li>
+            </ul>
+            <button class="arrow right-arrow" data-action="scrollRight" data-slider="slider2" style="margin-left: 8px;">&gt;</button>
+        </div>
+    </section>
+</div>
+
+    <footer>
+        &copy; Мультфільми та серіали
+    </footer>
+    <script src="js/scripts.min.js"></script>
+</body>
+</html>

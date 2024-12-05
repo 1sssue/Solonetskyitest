@@ -1,0 +1,120 @@
+body {
+  margin: 3px;
+}
+
+.wrapper {
+  height: calc(100vh - 6px);
+}
+
+.row {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  gap: 3px;
+  overflow: hidden; /* Приховує все, що виходить за межі контейнера */
+}
+
+.big-row {
+  grid-template-columns: 80% 20%;
+  height: 80%;
+}
+
+.big-row .part .row {
+  grid-template-columns: 55% 45%;
+}
+
+.part {
+  display: grid;
+  grid-template-rows: 35% 65%;
+  width: 100%;
+  gap: 3px;
+  overflow: hidden;
+}
+
+.grey {
+  width: 100%;
+  height: 100%;
+  background: #6f7c82;
+}
+
+.blue {
+  width: 100%;
+  height: 100%;
+  background: #5a9bd5;
+}
+
+.item {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  gap: 3px;
+}
+
+.item .row {
+  grid-template-columns: repeat(2, 1fr); /* Дві рівні колонки */
+}
+
+.yellow {
+  width: 100%;
+  height: 100%;
+  background: #ffc000;
+}
+
+.sky {
+  background: #5bd1d1;
+  width: 100%;
+}
+
+.red {
+  background: #e16b6b;
+  width: 100%;
+}
+
+.green {
+  width: 100%;
+  height: 100%;
+  background: #30a475;
+}
+
+.amber {
+  background: #c65c12;
+  height: calc(20% - 3px);
+  margin-top: 3px;
+}
+
+.block-with-border {
+  border: 1px solid #fafafa;
+  box-sizing: border-box;
+}
+
+@media (max-width: 950px) {
+  .big-row {
+    grid-template-columns: 70% 30%;
+  }
+}
+
+@media (max-width: 750px) {
+  .big-row {
+    grid-template-columns: 1fr;
+    grid-template-rows: 80% 20%;
+  }
+}
+
+@media (max-width: 414px) {
+  .part {
+    grid-template-rows: 20% 80%;
+  }
+
+  .yellow {
+    height: 100%;
+  }
+
+  .item {
+    grid-template-rows: 65% 35%;
+    overflow: hidden;
+  }
+
+  .big-row .part .row {
+    grid-template-columns: 1fr;
+  }
+}

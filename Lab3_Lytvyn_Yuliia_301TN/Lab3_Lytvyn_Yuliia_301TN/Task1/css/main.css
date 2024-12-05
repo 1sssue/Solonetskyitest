@@ -1,0 +1,72 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    background-color: bisque;
+}
+
+.line {
+    width: 100%;
+    overflow: hidden;
+    padding: 15px 0;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+}
+
+
+.line1 { background-color: #FFA500; } 
+.line2 { background-color: #98FB98; } 
+.line3 { background-color: #000080; } 
+.line4 { background-color: #FF1493; } 
+.line5 { background-color: #9400D3; } 
+
+
+/*Коливання*/
+@keyframes bounce {
+    0%, 100% { transform: translateX(-50%); }
+    50% { transform: translateX(50%); }
+}
+.line1 span {
+    display: inline-block;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+
+/* Текст пробігає справа наліво та з’являється знову */
+@keyframes scrollRightToLeft {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+.line2 span {
+    display: inline-block;
+    animation: scrollRightToLeft 5s linear infinite;
+}
+
+
+/* Текст рухається зліва направо і зупиняється праворуч */
+@keyframes scrollLeftToRightStop {
+    0% { transform: translateX(-100%); }  
+    100% { transform: translateX(100%); } 
+}
+.line3 span {
+    display: inline-block;
+    animation: scrollLeftToRightStop 8s ease forwards;
+}
+
+/*Різні запізнення */
+.line4 span {
+    display: inline-block;
+    animation: scrollLeftToRightStop 8s linear infinite;
+    animation-delay: 1s;
+}
+.line5 span {
+    display: inline-block;
+    animation: scrollLeftToRightStop 8s linear infinite;
+    animation-delay: 3s;
+}

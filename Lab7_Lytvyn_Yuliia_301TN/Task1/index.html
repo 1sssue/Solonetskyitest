@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма з різними елементами</title>
+    <link rel="stylesheet" href="/Task1/css/main.css">
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Заповніть форму</h2>
+    <form id="myForm" action="#" method="post" enctype="multipart/form-data" onsubmit="showMessage(event)">
+
+        <!-- Input text -->
+        <label for="name">Ім'я:</label>
+        <input type="text" id="name" name="name" placeholder="Введіть ваше ім'я" required>
+
+        <!-- Textarea -->
+        <label for="comments">Коментар:</label>
+        <textarea id="comments" name="comments" rows="4" placeholder="Напишіть свій коментар"></textarea>
+
+        <!-- Select -->
+        <label for="country">Країна:</label>
+        <select id="country" name="country">
+            <option value="ua">Україна</option>
+            <option value="pl">Польща</option>
+            <option value="de">Німеччина</option>
+        </select>
+
+        <!-- Checkbox -->
+        <label>
+            <input type="checkbox" name="subscribe" value="yes">
+            Кіт, ти маму мав?
+        </label>
+
+        <!-- Radiobutton -->
+        <p>А тата мав?</p>
+        <label>
+            <input type="radio" name="gender" value="male" required> Мав
+        </label>
+        <label>
+            <input type="radio" name="gender" value="female"> Мав
+        </label>
+
+        <!-- Password -->
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password" required>
+
+        <!-- File -->
+        <label for="file">Прикріпити файл:</label>
+        <input type="file" id="file" name="file">
+
+        <!-- Button -->
+        <button type="submit">Відправити</button>
+    </form>
+
+    <!-- Success Message -->
+    <p id="successMessage" style="display: none;">Відправлено!</p>
+</div>
+
+<script>
+    function showMessage(event) {
+        event.preventDefault();
+        document.getElementById("successMessage").style.display = "block";
+        document.getElementById("myForm").reset();
+    }
+</script>
+
+</body>
+</html>

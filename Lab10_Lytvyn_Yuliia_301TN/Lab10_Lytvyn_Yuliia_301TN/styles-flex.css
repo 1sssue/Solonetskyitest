@@ -1,0 +1,129 @@
+body {
+  margin: 3px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column; /* Розташовуємо елементи вертикально */
+  justify-content: flex-end; /* Вирівнюємо елементи донизу */
+  height: calc(100vh - 6px); /* Висота з урахуванням відступів body */
+  gap: 3px;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  gap: 3px;
+}
+
+.big-row {
+  height: 80%;
+}
+
+.part {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  gap: 3px;
+}
+
+.grey {
+  width: 20%;
+  height: 100%;
+  background: #6f7c82;
+}
+
+.blue {
+  width: 100%;
+  height: 35%;
+  flex-shrink: 0; /* Запобігає зміні висоти */
+  background: #5a9bd5;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  gap: 3px;
+}
+
+.yellow {
+  width: 45%;
+  height: 100%;
+  background: #ffc000;
+}
+
+.sky {
+  background: #5bd1d1;
+  width: 50%;
+}
+
+.red {
+  background: #e16b6b;
+  width: 50%;
+}
+
+.green {
+  width: 100%;
+  height: 100%;
+  background: #30a475;
+}
+
+.amber {
+  background: #c65c12;
+  height: 20%;
+}
+
+.block-with-border {
+  border: 1px solid #fafafa; /* Тонка біла рамка */
+  box-sizing: border-box; /* Увімкнення рамки в розрахунок розмірів */
+}
+
+@media (max-width: 950px) {
+  .part {
+    width: 70%;
+  }
+
+  .grey {
+    width: 30%;
+  }
+}
+
+@media (max-width: 750px) {
+  .big-row {
+    flex-direction: column;
+  }
+
+  .part {
+    width: 100%;
+    height: 100%;
+  }
+
+  .grey {
+    width: 100%;
+    height: 20%;
+  }
+}
+
+@media (max-width: 414px) {
+  .blue {
+    height: 20%;
+  }
+
+  .green {
+    height: 50%;
+  }
+
+  .yellow,
+  .sky,
+  .red {
+    width: 100%;
+    height: 50%;
+  }
+
+  .big-row .row {
+    flex-direction: column;
+  }
+}

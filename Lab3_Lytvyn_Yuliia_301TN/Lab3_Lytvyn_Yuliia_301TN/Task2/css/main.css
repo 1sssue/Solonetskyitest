@@ -1,0 +1,80 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.line {
+    width: 70%; 
+    height: 15%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    color: #ffffff;
+    margin: 0 auto; /* Центрування по горизонталі */
+}
+
+/* Коливання*/
+.line1 {
+    background-color: #FF5733;
+    animation: oscillate 1s ease-in-out infinite;
+}
+@keyframes oscillate {
+    0%, 100% { transform: translateY(-10px); }
+    50% { transform: translateY(10px); }
+}
+
+
+/* Рух знизу до верху з повторенням */
+.line2 {
+    background-color: #33C1FF;
+    animation: scrollUpRepeat 5s linear infinite;
+}
+@keyframes scrollUpRepeat {
+    0% { transform: translateY(100vh); }
+    100% { transform: translateY(-100vh); }
+}
+
+
+/* Рух знизу до верху з фіксацією зверху */
+.line3 {
+    background-color: #FF33A1;
+    animation: scrollUpFix 5s linear forwards;
+}
+@keyframes scrollUpFix {
+    0% { transform: translateY(100vh); }
+    100% { transform: translateY(-90%); }
+}
+
+
+/* Рух знизу до верху із затримкою 3 секунди */
+.line4 {
+    background-color: #75FF33;
+    opacity: 0;
+    animation: scrollUpDelay3 5s linear infinite;
+    animation-delay: 3s;
+}
+@keyframes scrollUpDelay3 {
+    0% { opacity: 1; transform: translateY(100vh); }
+    100% { transform: translateY(-100vh); }
+}
+
+
+/* Рух знизу до верху із затримкою 5 секунд */
+.line5 {
+    background-color: #FF8C33;
+    opacity: 0;
+    animation: scrollUpDelay5 5s linear infinite;
+    animation-delay: 5s;
+}
+@keyframes scrollUpDelay5 {
+    0% { opacity: 1; transform: translateY(100vh); }
+    100% { transform: translateY(-100vh); }
+}

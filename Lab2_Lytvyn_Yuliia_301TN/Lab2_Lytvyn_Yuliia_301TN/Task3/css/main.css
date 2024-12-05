@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/Task3/img/background.jpg'); /* Вказуємо шлях до картинки */
+    background-size: cover; /* Картинка заповнює весь екран */
+    background-position: center; 
+    background-attachment: fixed; /* Картинка не рухається при прокручуванні сторінки */
+    height: 100%;
+}
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 стовпці */
+    gap: 30px; /* Відстань між контейнерами */
+    max-width: 1600px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #ebe5e5;
+    border: 2px solid #000; /* Чорна рамка для кожного контейнера */
+    border-radius: 15px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.container img {
+    width: 400px; 
+    height: 400px; 
+    object-fit: cover; 
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 30px;
+}
