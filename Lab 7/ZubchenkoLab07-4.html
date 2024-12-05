@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Замовлення товару</title>
+    <style>
+        .form-container {
+            width: 600px; /* Ширина форми */
+            margin: 0 auto; /* Центруємо форму на сторінці */
+            background-color: #e6ffff; /* Колір фону */
+            padding: 20px; /* Відступи всередині форми */
+            border: 1px solid #000; /* Рамка для форми */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Замовлення товару</h2>
+        <form action="ZubchenkoLab07-result.html" method="get" target="_blank">
+            <label for="account_number">Номер банківського рахунку:</label><br>
+            <input type="text" id="account_number" name="account_number" maxlength="20" required><br><br>
+
+            <label for="user_number">Особистий номер користувача:</label><br>
+            <input type="text" id="user_number" name="user_number" maxlength="20" required><br><br>
+
+            <label>Виберіть товар:</label><br>
+            <input type="checkbox" name="items[]" value="item1"> Товар 1<br>
+            <input type="checkbox" name="items[]" value="item2"> Товар 2<br>
+            <input type="checkbox" name="items[]" value="item3"> Товар 3<br>
+            <input type="checkbox" name="items[]" value="item4"> Товар 4<br>
+            <input type="checkbox" name="items[]" value="item5"> Товар 5<br><br>
+
+            <label for="comments">Ваші коментарі:</label><br>
+            <textarea id="comments" name="comments" rows="5" cols="50"></textarea><br><br>
+
+            <label>Виберіть спосіб оплати:</label><br>
+            <input type="radio" id="cash" name="payment_method" value="cash" required> Готівковий<br>
+            <input type="radio" id="noncash" name="payment_method" value="noncash" required> Безготівковий<br><br>
+
+            <label>Яку додаткову інформацію ви хочете отримати?</label><br>
+            <input type="checkbox" name="additional_info[]" value="balance"> Дані про залишки на рахунку<br>
+            <input type="checkbox" name="additional_info[]" value="last_payments"> Список останніх виплат по рахунку<br><br>
+
+            <input type="submit" value="Надіслати замовлення">
+            <input type="reset" value="Очистити форму">
+        </form>
+    </div>
+
+</body>
+</html>

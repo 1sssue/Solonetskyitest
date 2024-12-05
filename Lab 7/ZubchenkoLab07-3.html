@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZubchenkoLab07-3</title>
+    <style>
+        /* Центрування форми та встановлення її ширини */
+        .form-container {
+            width: 600px; /* Встановлюємо фіксовану ширину */
+            margin: 0 auto; /* Центруємо форму на сторінці */
+            background-color: #e6ffff; /* Колір фону для форми */
+            padding: 20px; /* Додаємо відступи всередині форми */
+            border: 1px solid #000; /* Додаємо рамку для форми */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            border: 1px solid #000;
+            padding: 8px;
+        }
+        th {
+            font-size: 24px;
+            color: red;
+            background-color: #ccffff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <!-- Заголовок анкети -->
+        <form action="ZubchenkoLab07-result.html" method="get" target="_blank">
+        <table>
+            <tr>
+                <th colspan="2">Анкета</th>
+            </tr>
+            <!-- Поля для введення даних анкети -->
+            <tr>
+                <td>1. Прізвище</td>
+                <td><input type="text" name="surname"></td>
+            </tr>
+            <tr>
+                <td>2. Ім'я, по батькові</td>
+                <td><input type="text" name="name"></td>
+            </tr>
+            <tr>
+                <td>3. Число і рік народження</td>
+                <td><input type="date" name="birthdate"></td>
+            </tr>
+            <tr>
+                <td>4. Домашня адреса</td>
+                <td><input type="text" name="address"></td>
+            </tr>
+            <tr>
+                <td>5. Місце навчання (роботи)</td>
+                <td><input type="text" name="place"></td>
+            </tr>
+            <tr>
+                <td>6. Домашній (робочий) телефон</td>
+                <td><input type="tel" name="phone"></td>
+            </tr>
+            <tr>
+                <td>7. E-mail</td>
+                <td><input type="email" name="email"></td>
+            </tr>
+            <tr>
+                <td>8. Область наукових інтересів</td>
+                <td>
+                    <textarea name="interests" rows="6" cols="40"></textarea>
+                </td>
+            </tr>
+        </table>
+
+        <!-- Кнопки для відміни та відправки форми -->
+        <input type="reset" value="Відмінити введення">
+
+        <input type="submit" value="Надіслати дані та перейти до 2 етапу реєстрації">
+    </div>
+
+</body>
+</html>
