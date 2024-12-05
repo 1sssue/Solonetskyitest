@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IvanennkoLab04-3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .marquee {
+            margin: 10px 0;
+            padding: 20px;
+            height: 150px;
+            overflow: hidden;
+        }
+        .row1 {
+            background-color: lightblue;
+        }
+        .row2 {
+            background-color: lightgreen;
+        }
+        .row3 {
+            background-color: lightcoral;
+        }
+        .row4 {
+            background-color: lightgoldenrodyellow;
+        }
+        .row5 {
+            background-color: lightpink;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Текст або рисунки коливаються -->
+    <div class="marquee row1">
+        <marquee behavior="alternate" direction="up">Текст коливається вгору і вниз</marquee>
+    </div>
+
+    <!-- Послідовність рисунків знизу вгору і з'являється знову -->
+    <div class="marquee row2">
+        <marquee direction="up"><img src="C:\Users\Kofeyok\Desktop\HTML\lab4\lab4\img\Aq.gif" alt="Зображення 1"></marquee>
+    </div>
+
+    <!-- Послідовність рисунків згори до низу і зупиняється -->
+    <div class="marquee row3">
+        <marquee direction="down" scrollamount="10" loop="1"><img src="C:\Users\Kofeyok\Desktop\HTML\lab4\lab4\img\XOsX.gif" alt="Зображення 2"></marquee>
+    </div>
+
+    <!-- Текст з різним запізненням, перший -->
+    <div class="marquee row4">
+        <marquee direction="up" scrollamount="3">Текст повільно рухається вгору</marquee>
+    </div>
+
+    <!-- Текст з різним запізненням, другий -->
+    <div class="marquee row5">
+        <marquee direction="down" scrollamount="10">Текст швидко рухається вниз</marquee>
+    </div>
+
+</body>
+</html>
+
+
+
+
