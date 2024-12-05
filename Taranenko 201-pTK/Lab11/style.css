@@ -1,0 +1,45 @@
+/* Фонове зображення сторінки */
+body {
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-style: italic; /* Стиль тексту – курсив */
+    font-size: 28px; /* Довільний розмір тексту */
+    margin-left: 50px; /* Відступ ліворуч */
+    margin-right: 50px; /* Відступ праворуч */
+}
+
+/* Форматування абзаців */
+p {
+    text-align: justify; /* Вирівнювання тексту абзаців по ширині */
+    text-indent: 30px; /* Червоний рядок на початку абзаців */
+}
+
+/* Заголовок 1-го рівня */
+h1 {
+    text-align: center; /* Вирівнювання по центру */
+    font-weight: bold; /* Жирний текст */
+    font-style: normal; /* Нормальний стиль (не курсив) */
+    color: #2E8B57; /* Визначений колір */
+}
+
+/* Стилі для посилань */
+a:link {
+    color: #0000FF; /* Колір для не відвіданих посилань */
+    text-decoration: none;
+}
+
+a:visited {
+    color: #800080; /* Колір для відвіданих посилань */
+}
+
+a:hover {
+    color: #FF4500; /* Колір для активних посилань (при наведенні) */
+    text-decoration: underline;
+}
+
+/* Форматування зображень */
+img {
+    max-width: 100%;
+    margin: 20px 0; /* Відступи зверху і знизу для зображень */
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Адаптивна Сторінка</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            transition: all 0.3s ease-in-out; /* Плавний перехід */
+        }
+
+        html, body {
+            height: 100%;
+            overflow: hidden; /* Запобігаємо прокрутці */
+        }
+
+        .wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .block {
+            flex-grow: 1;
+            margin: 3px;
+            border: 1px solid white; /* Більш контрастна рамка */
+            transition: all 0.5s ease; /* Плавний перехід розмірів і кольорів */
+        }
+
+        .block1 {
+            background-color: #FF5733; /* Червоний */
+            flex-basis: 60%; /* Мінімальна ширина */
+            flex-grow: 2; /* Додаткове зростання */
+            height: 45%; /* Висота для першого блоку */
+        }
+
+        .block2 {
+            background-color: #33FF57; /* Зелений */
+            flex-basis: 35%;
+            flex-grow: 2;
+            height: 45%; /* Висота для другого блоку */
+        }
+
+        .block3 {
+            background-color: #3357FF; /* Синій */
+            flex-basis: 40%;
+            flex-grow: 1;
+            height: 30%; /* Висота для третього блоку */
+        }
+
+        .block4 {
+            background-color: #FF33A6; /* Рожевий */
+            flex-basis: 40%;
+            flex-grow: 1;
+            height: 30%; /* Висота для четвертого блоку */
+        }
+
+        .block5 {
+            background-color: #FFD733; /* Жовтий */
+            flex-basis: 30%;
+            flex-grow: 1;
+            height: 30%; /* Висота для п'ятого блоку */
+        }
+
+        .block6 {
+            background-color: #33FFF5; /* Бірюзовий */
+            flex-basis: 60%;
+            flex-grow: 2;
+            height: 30%; /* Висота для шостого блоку */
+        }
+
+        /* Адаптивність під різні екрани */
+        @media (max-width: 1200px) {
+            .block {
+                flex-basis: 48%; /* Зменшуємо ширину блоків */
+                height: 48%; /* Висота для адаптації */
+            }
+        }
+
+        @media (max-width: 750px) {
+            .block {
+                flex-basis: 100%; /* Блоки на всю ширину */
+                height: 30%; /* Висота для адаптації */
+            }
+        }
+
+        @media (max-width: 500px) {
+            .block {
+                height: 20%; /* Вертикальне розміщення блоків */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="block block1"></div>
+        <div class="block block2"></div>
+        <div class="block block3"></div>
+        <div class="block block4"></div>
+        <div class="block block5"></div>
+        <div class="block block6"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+.swiper {
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	overflow: hidden;
+	list-style: none;
+	padding: 10px 0;
+	z-index: 1
+}
+
+.swiper-wrapper {
+	position: relative;
+	display: flex;
+	transition-property: transform;
+	box-sizing: content-box
+}
+
+.swiper-slide {
+	position: relative;
+	margin: 0;
+	width: 100%;
+	height: auto;
+	flex-shrink: 0;
+	transition-property: transform;
+}
+
+
+/* Кнопки навигации слайдера */
+.swiper-button-prev {
+    position: absolute;
+    bottom: 45%;
+    left: -35px;
+    display: inline-block;
+    color: #5c5c5c;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 5;
+}
+    .swiper-button-prev:hover:not(.swiper-button-disabled) { color: #ca563f; }
+
+.swiper-button-next {
+    position: absolute;
+    bottom: 45%;
+    right: -35px;
+    display: inline-block;
+    color: #5c5c5c;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 5;
+}
+    .swiper-button-next:hover:not(.swiper-button-disabled) { color: #ca563f; }
+
+@media (max-width: 320px) {
+	.swiper-button-next { right: -18px; }
+	.swiper-button-prev { left: -18px; }
+}
+
+/* Анимация слайдов */
+.animate { animation: animate 2s;}
+
+    @keyframes animate {
+    	from { opacity: 0; }
+
+    	to { opacity: 1; }
+    }
+
+
+/* Short poster */
+@media (min-width: 320px) {
+
+	.swiper-slide {
+		width: 150px;
+		margin-right: 20px;
+	}
+}
+    @media (min-width: 400px) {
+
+		.swiper-slide {
+			width: 150px;
+			margin-right: 20px;
+		}
+    }
+
+    @media (min-width: 768px) {
+
+		.swiper-slide {
+			width: 177px;
+			margin-right: 20px;
+		}
+    }
+
+	@media (min-width: 912px) {
+
+		.swiper-slide {
+			width: 137.6px;
+			margin-right: 20px;
+		}
+    }
+
+    @media (min-width: 1024px) {
+
+		.swiper-slide {
+			width: 150px;
+			margin-right: 20px;
+		}
+    }
+
+    @media (min-width: 1260px) {
+
+		.swiper-slide {
+			width: 183.333px;
+			margin-right: 20px;
+		}
+    }
+
+	@media (min-width: 1280px) {
+
+		.swiper-slide {
+			width: 127.5px;
+			margin-right: 20px;
+		}
+    }
